@@ -621,8 +621,7 @@ function FraudLegend({ players, allPlayers, outlierIds, hiddenIds, onToggle, sho
   );
 }
 
-// Persistent detail panel shown on chart click
-function FraudDetailPanel({ period, fraudData, allPlayers, outlierIds, aggregation, onOpenPopup, onClose }) {
+function FraudDetailPanel({ period, fraudData, allPlayers, outlierIds, aggregation, onOpenPopup, onClose, isPinned }) {
   const periodLabel = aggregation === 'weekly' ? `Week of ${formatDate(period)}` : formatDate(period);
   const periodPoint = fraudData.chartData.find(d => d.period === period);
 
@@ -640,8 +639,11 @@ function FraudDetailPanel({ period, fraudData, allPlayers, outlierIds, aggregati
   return (
     <div className="bg-gray-900 rounded-2xl overflow-hidden">
       <div className="flex items-center justify-between px-4 py-3 border-b border-gray-800">
-        <p className="text-sm font-semibold text-white">{periodLabel}</p>
-        <button onClick={onClose} className="text-gray-500 hover:text-gray-300 text-xl leading-none">×</button>
+        <div className="flex items-center gap-2">
+          <p className="text-sm font-semibold text-white">{periodLabel}</p>
+          {!isPinned && <span className="text-xs text-gray-600">click chart to pin</span>}
+        </div>
+        {isPinned && <button onClick={onClose} className="text-gray-500 hover:text-gray-300 text-xl leading-none">×</button>}
       </div>
       <div className="divide-y divide-gray-800/60">
         {rows.map((p, i) => {
@@ -724,7 +726,7 @@ function ActivityPopup({ data, memberMap, onActivityClick, onPlayerClick, onClos
   );
 }
 
-function FraudRadarChart({ chartData, visiblePlayers, allPlayers, outliersByPeriod, aggregation, onChartClick, showAverage, showMedian }) {
+function FraudRadarChart({ chartData, visiblePlayers, allPlayers, outliersByPeriod, aggregation, onChartClick, onChartHover, showAverage, showMedian }) {
   const getColor = (player) => {
     const isOutlier = Object.values(outliersByPeriod).some(s => s.has(player.id));
     if (isOutlier) return '#ef4444';
@@ -738,6 +740,8 @@ function FraudRadarChart({ chartData, visiblePlayers, allPlayers, outliersByPeri
         data={chartData}
         margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
         onClick={(e) => e?.activeLabel && onChartClick(e.activeLabel)}
+        onMouseMove={(e) => onChartHover?.(e?.activeLabel || null)}
+        onMouseLeave={() => onChartHover?.(null)}
         style={{ cursor: 'pointer' }}
       >
         <CartesianGrid strokeDasharray="3 3" stroke="#1f2937" />
@@ -902,6 +906,8 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
   const [hiddenFraudPlayers, setHiddenFraudPlayers] = useState(new Set());
   const [showOnlyOutliers, setShowOnlyOutliers] = useState(false);
   const [clickedFraudPeriod, setClickedFraudPeriod] = useState(null);
+  const [hoveredFraudPeriod, setHoveredFraudPeriod] = useState(null);
+  const hoverClearTimer = useRef(null);
   const [excludeBRBonus, setExcludeBRBonus] = useState(false);
   const [showFraudAverage, setShowFraudAverage] = useState(false);
   const [showFraudMedian, setShowFraudMedian] = useState(false);
@@ -980,6 +986,16 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
       next.has(id) ? next.delete(id) : next.add(id);
       return next;
     });
+  };
+
+  const handleChartHover = (period) => {
+    if (hoverClearTimer.current) clearTimeout(hoverClearTimer.current);
+    if (period) {
+      setHoveredFraudPeriod(period);
+    } else {
+      // 350 ms grace — lets the mouse travel from chart to the detail panel without it disappearing
+      hoverClearTimer.current = setTimeout(() => setHoveredFraudPeriod(null), 350);
+    }
   };
 
   const xInterval = 6;
@@ -1160,18 +1176,6 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
                     ⚔️ Exclude BR bonuses
                   </button>
                 )}
-                {fraudOutlierIds.size > 0 && (
-                  <button
-                    onClick={() => setShowOnlyOutliers(v => !v)}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-                      showOnlyOutliers
-                        ? 'bg-red-500/20 text-red-400 border border-red-500/40'
-                        : 'bg-gray-800 text-gray-400 hover:text-gray-200'
-                    }`}
-                  >
-                    ⚠️ Outliers only
-                  </button>
-                )}
                 {['daily', 'weekly'].map(agg => (
                   <button
                     key={agg}
@@ -1222,6 +1226,7 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
                   outliersByPeriod={fraudData.outliersByPeriod}
                   aggregation={fraudAgg}
                   onChartClick={(period) => setClickedFraudPeriod(prev => prev === period ? null : period)}
+                  onChartHover={handleChartHover}
                   showAverage={showFraudAverage}
                   showMedian={showFraudMedian}
                 />
@@ -1247,6 +1252,19 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
                   >
                     Add all
                   </button>
+                  <div className="w-px h-4 bg-gray-700 mx-1 flex-shrink-0" />
+                  {fraudOutlierIds.size > 0 && (
+                    <button
+                      onClick={() => setShowOnlyOutliers(v => !v)}
+                      className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium border transition-colors ${
+                        showOnlyOutliers
+                          ? 'border-red-500/50 bg-red-500/10 text-red-400'
+                          : 'border-gray-700 bg-gray-800 text-gray-500 hover:text-gray-300 hover:border-gray-600'
+                      }`}
+                    >
+                      ⚠️ Outliers only
+                    </button>
+                  )}
                   <div className="w-px h-4 bg-gray-700 mx-1 flex-shrink-0" />
                   <button
                     onClick={() => setShowFraudAverage(v => !v)}
@@ -1278,17 +1296,23 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
               </div>
             )}
 
-            {/* Detail panel shown when a period is clicked */}
-            {clickedFraudPeriod && fraudData && (
+            {/* Detail panel — appears on hover, stays pinned on click */}
+            {(hoveredFraudPeriod || clickedFraudPeriod) && fraudData && (
+              <div
+                onMouseEnter={() => { if (hoverClearTimer.current) clearTimeout(hoverClearTimer.current); }}
+                onMouseLeave={() => { if (!clickedFraudPeriod) hoverClearTimer.current = setTimeout(() => setHoveredFraudPeriod(null), 150); }}
+              >
               <FraudDetailPanel
-                period={clickedFraudPeriod}
+                period={clickedFraudPeriod || hoveredFraudPeriod}
                 fraudData={fraudData}
                 allPlayers={fraudData.players}
                 outlierIds={fraudOutlierIds}
                 aggregation={fraudAgg}
                 onOpenPopup={setPopupData}
-                onClose={() => setClickedFraudPeriod(null)}
+                isPinned={!!clickedFraudPeriod}
+                onClose={() => { setClickedFraudPeriod(null); setHoveredFraudPeriod(null); }}
               />
+              </div>
             )}
 
             {fraudData && fraudData.players.length > 0 && (

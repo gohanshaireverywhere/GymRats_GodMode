@@ -684,7 +684,8 @@ export function getActivityTypeSummary(data) {
 
 // Returns per-player per-period (daily or weekly) points for one activity type,
 // along with the underlying check-ins and outlier flags for fraud detection.
-export function getActivityTypePlayerData(data, activityType, memberMap, aggregation = 'daily') {
+export function getActivityTypePlayerData(data, activityType, memberMap, aggregation = 'daily', opts = {}) {
+  const { madThreshold = 2.5 } = opts;
   const startDate = new Date(data.start_date);
   const endDate = new Date(data.end_date);
 
@@ -774,7 +775,7 @@ export function getActivityTypePlayerData(data, activityType, memberMap, aggrega
     const med = median(scores.map(e => e.pts));
     const mad = median(scores.map(e => Math.abs(e.pts - med)));
     if (mad === 0) continue;
-    const threshold = med + 2.5 * mad;
+    const threshold = med + madThreshold * mad;
     outliersByPeriod[period] = new Set(
       scores.filter(e => e.pts > threshold).map(e => e.id)
     );

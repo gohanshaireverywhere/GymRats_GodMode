@@ -528,22 +528,32 @@ function ActivityTypeSidebar({ types, selected, onSelect }) {
   );
 }
 
+const AVG_KEY = '__avg__';
+const MED_KEY = '__med__';
+const REF_LABELS = { [AVG_KEY]: 'Average', [MED_KEY]: 'Median' };
+const REF_COLORS = { [AVG_KEY]: '#facc15', [MED_KEY]: '#c084fc' };
+
 // Hover-only tooltip — purely informational, no interactivity
 function FraudTooltip({ active, payload, label, outliersByPeriod, aggregation }) {
   if (!active || !payload?.length) return null;
-  const sorted = [...payload].filter(e => e.value > 0).sort((a, b) => b.value - a.value);
   const outliers = outliersByPeriod?.[label] || new Set();
   const periodLabel = aggregation === 'weekly' ? `Week of ${formatDate(label)}` : formatDate(label);
-  if (sorted.length === 0) return null;
+
+  const refEntries = payload.filter(e => e.dataKey === AVG_KEY || e.dataKey === MED_KEY);
+  const playerEntries = [...payload]
+    .filter(e => e.dataKey !== AVG_KEY && e.dataKey !== MED_KEY && e.value > 0)
+    .sort((a, b) => b.value - a.value);
+
+  if (playerEntries.length === 0 && refEntries.length === 0) return null;
 
   return (
     <div className="bg-gray-950 border border-gray-700 rounded-xl p-3 shadow-2xl pointer-events-none" style={{ minWidth: 200 }}>
       <p className="text-xs text-gray-400 mb-2 font-medium">{periodLabel} · click to inspect</p>
       <div className="space-y-1">
-        {sorted.slice(0, 12).map((entry, i) => {
-          const isOutlier = outliers.has(entry.dataKey?.replace?.(/ /g, ' '));
+        {playerEntries.slice(0, 12).map((entry, i) => {
+          const isOutlier = outliers.has(entry.dataKey);
           return (
-            <div key={entry.name} className="flex items-center justify-between gap-3 text-xs">
+            <div key={entry.dataKey} className="flex items-center justify-between gap-3 text-xs">
               <div className="flex items-center gap-1.5 min-w-0">
                 <span className="text-gray-600 w-4 flex-shrink-0 text-right">{i + 1}.</span>
                 <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: entry.color }} />
@@ -556,19 +566,35 @@ function FraudTooltip({ active, payload, label, outliersByPeriod, aggregation })
             </div>
           );
         })}
-        {sorted.length > 12 && <p className="text-xs text-gray-600 pt-1">+{sorted.length - 12} more</p>}
+        {playerEntries.length > 12 && <p className="text-xs text-gray-600 pt-1">+{playerEntries.length - 12} more</p>}
       </div>
+      {refEntries.length > 0 && (
+        <div className="mt-2 pt-2 border-t border-gray-800 space-y-1">
+          {refEntries.map(entry => (
+            <div key={entry.dataKey} className="flex items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-1.5">
+                <div className="w-4 h-0.5 flex-shrink-0" style={{ background: REF_COLORS[entry.dataKey] }} />
+                <span style={{ color: REF_COLORS[entry.dataKey] }}>{REF_LABELS[entry.dataKey]}</span>
+              </div>
+              <span className="font-bold" style={{ color: REF_COLORS[entry.dataKey] }}>
+                {formatPoints(entry.value)}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
 
 // Clickable legend pills rendered outside the chart
-function FraudLegend({ players, allPlayers, outlierIds, hiddenIds, onToggle }) {
+function FraudLegend({ players, allPlayers, outlierIds, hiddenIds, onToggle, showOnlyOutliers }) {
   return (
     <div className="flex flex-wrap gap-1.5 pt-1">
       {allPlayers.map((player, i) => {
         const isOutlier = outlierIds.has(player.id);
         const isHidden = hiddenIds.has(player.id);
+        const isDimmed = isHidden || (showOnlyOutliers && !isOutlier);
         const color = isOutlier ? '#ef4444' : PALETTE[i % PALETTE.length];
         return (
           <button
@@ -576,18 +602,18 @@ function FraudLegend({ players, allPlayers, outlierIds, hiddenIds, onToggle }) {
             onClick={() => onToggle(player.id)}
             title={isHidden ? 'Click to show' : 'Click to hide'}
             className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-all ${
-              isHidden
+              isDimmed
                 ? 'border-gray-700 text-gray-600 bg-transparent opacity-50'
                 : 'border-transparent'
             }`}
-            style={isHidden ? {} : { background: color + '22', borderColor: color + '55', color }}
+            style={isDimmed ? {} : { background: color + '22', borderColor: color + '55', color }}
           >
             <span
               className="w-2 h-2 rounded-full flex-shrink-0"
-              style={{ background: isHidden ? '#374151' : color }}
+              style={{ background: isDimmed ? '#374151' : color }}
             />
             {player.name}
-            {isOutlier && !isHidden && <span className="ml-0.5">⚠️</span>}
+            {isOutlier && !isDimmed && <span className="ml-0.5">⚠️</span>}
           </button>
         );
       })}
@@ -698,8 +724,7 @@ function ActivityPopup({ data, memberMap, onActivityClick, onPlayerClick, onClos
   );
 }
 
-function FraudRadarChart({ chartData, visiblePlayers, allPlayers, outliersByPeriod, aggregation, onChartClick }) {
-  // Derive outlier status using allPlayers indices for consistent coloring
+function FraudRadarChart({ chartData, visiblePlayers, allPlayers, outliersByPeriod, aggregation, onChartClick, showAverage, showMedian }) {
   const getColor = (player) => {
     const isOutlier = Object.values(outliersByPeriod).some(s => s.has(player.id));
     if (isOutlier) return '#ef4444';
@@ -763,6 +788,34 @@ function FraudRadarChart({ chartData, visiblePlayers, allPlayers, outliersByPeri
             />
           );
         })}
+        {showAverage && (
+          <Line
+            key={AVG_KEY}
+            type="monotone"
+            dataKey={AVG_KEY}
+            name="Average"
+            stroke={REF_COLORS[AVG_KEY]}
+            strokeWidth={2}
+            strokeDasharray="8 4"
+            dot={false}
+            activeDot={{ r: 4, strokeWidth: 0 }}
+            isAnimationActive={false}
+          />
+        )}
+        {showMedian && (
+          <Line
+            key={MED_KEY}
+            type="monotone"
+            dataKey={MED_KEY}
+            name="Median"
+            stroke={REF_COLORS[MED_KEY]}
+            strokeWidth={2}
+            strokeDasharray="8 4"
+            dot={false}
+            activeDot={{ r: 4, strokeWidth: 0 }}
+            isAnimationActive={false}
+          />
+        )}
       </LineChart>
     </ResponsiveContainer>
   );
@@ -850,6 +903,9 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
   const [showOnlyOutliers, setShowOnlyOutliers] = useState(false);
   const [clickedFraudPeriod, setClickedFraudPeriod] = useState(null);
   const [excludeBRBonus, setExcludeBRBonus] = useState(false);
+  const [showFraudAverage, setShowFraudAverage] = useState(false);
+  const [showFraudMedian, setShowFraudMedian] = useState(false);
+  const [fraudMadThreshold, setFraudMadThreshold] = useState(2.5);
 
   const fraudActivityTypes = useMemo(() => getActivityTypeSummary(data), [data]);
   const resolvedFraudType = fraudType || fraudActivityTypes[0]?.type || null;
@@ -862,9 +918,9 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
 
   const fraudData = useMemo(
     () => resolvedFraudType
-      ? getActivityTypePlayerData(fraudAnalysisData, resolvedFraudType, memberMap, fraudAgg)
+      ? getActivityTypePlayerData(fraudAnalysisData, resolvedFraudType, memberMap, fraudAgg, { madThreshold: fraudMadThreshold })
       : null,
-    [fraudAnalysisData, resolvedFraudType, memberMap, fraudAgg]
+    [fraudAnalysisData, resolvedFraudType, memberMap, fraudAgg, fraudMadThreshold]
   );
 
   // Trim chart data to last period that has any non-zero value
@@ -876,6 +932,29 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
     });
     return fraudData.chartData.slice(0, lastIdx + 1);
   }, [fraudData]);
+
+  // Augment chart data with per-period average/median across ALL players when toggled on
+  const augmentedFraudChartData = useMemo(() => {
+    if (!trimmedFraudChartData.length || !fraudData) return trimmedFraudChartData;
+    if (!showFraudAverage && !showFraudMedian) return trimmedFraudChartData;
+    return trimmedFraudChartData.map(point => {
+      const scores = fraudData.players
+        .map(p => point[p.name] || 0)
+        .filter(s => s > 0);
+      const result = { ...point };
+      if (showFraudAverage && scores.length > 0) {
+        result[AVG_KEY] = parseFloat((scores.reduce((s, v) => s + v, 0) / scores.length).toFixed(2));
+      }
+      if (showFraudMedian && scores.length > 0) {
+        const sorted = [...scores].sort((a, b) => a - b);
+        const mid = Math.floor(sorted.length / 2);
+        result[MED_KEY] = parseFloat(
+          (sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid]).toFixed(2)
+        );
+      }
+      return result;
+    });
+  }, [trimmedFraudChartData, fraudData, showFraudAverage, showFraudMedian]);
 
   // Compute the set of all outlier player IDs across all periods
   const fraudOutlierIds = useMemo(() => {
@@ -1109,11 +1188,27 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
               </div>
             </div>
 
+            {/* Sensitivity slider */}
+            <div className="flex items-center gap-3 text-xs text-gray-400">
+              <span className="flex-shrink-0">Sensitivity</span>
+              <input
+                type="range"
+                min={0.5}
+                max={5}
+                step={0.25}
+                value={fraudMadThreshold}
+                onChange={e => setFraudMadThreshold(parseFloat(e.target.value))}
+                className="w-32 accent-orange-500"
+              />
+              <span className="font-mono text-orange-400 w-8">{fraudMadThreshold}×</span>
+              <span className="text-gray-600">← more outliers · fewer →</span>
+            </div>
+
             {/* Outlier info */}
             {fraudData && fraudOutlierIds.size > 0 && (
               <div className="flex items-center gap-2 px-3 py-2 bg-red-950/40 border border-red-900/40 rounded-xl text-xs text-red-400">
                 <span>⚠️</span>
-                <span>Red dashed lines are statistical outliers (≥ 2.5× MAD above median). Hover to preview · click chart to inspect.</span>
+                <span>Red dashed lines are statistical outliers (≥ {fraudMadThreshold}× MAD above median). Hover to preview · click chart to inspect.</span>
               </div>
             )}
 
@@ -1121,12 +1216,14 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
             {fraudData && fraudData.players.length > 0 ? (
               <div className="bg-gray-900 rounded-2xl p-4">
                 <FraudRadarChart
-                  chartData={trimmedFraudChartData}
+                  chartData={augmentedFraudChartData}
                   visiblePlayers={visibleFraudPlayers}
                   allPlayers={fraudData.players}
                   outliersByPeriod={fraudData.outliersByPeriod}
                   aggregation={fraudAgg}
                   onChartClick={(period) => setClickedFraudPeriod(prev => prev === period ? null : period)}
+                  showAverage={showFraudAverage}
+                  showMedian={showFraudMedian}
                 />
                 {/* Clickable legend pills */}
                 <FraudLegend
@@ -1134,7 +1231,46 @@ export default function Timeline({ data, leaderboard, teamStandings, memberMap, 
                   outlierIds={fraudOutlierIds}
                   hiddenIds={hiddenFraudPlayers}
                   onToggle={toggleFraudPlayer}
+                  showOnlyOutliers={showOnlyOutliers}
                 />
+                {/* Control row */}
+                <div className="flex items-center gap-2 pt-2 mt-2 border-t border-gray-800 flex-wrap">
+                  <button
+                    onClick={() => setHiddenFraudPlayers(new Set(fraudData.players.map(p => p.id)))}
+                    className="px-2.5 py-1 rounded-lg text-xs bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-colors"
+                  >
+                    Remove all
+                  </button>
+                  <button
+                    onClick={() => setHiddenFraudPlayers(new Set())}
+                    className="px-2.5 py-1 rounded-lg text-xs bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-colors"
+                  >
+                    Add all
+                  </button>
+                  <div className="w-px h-4 bg-gray-700 mx-1 flex-shrink-0" />
+                  <button
+                    onClick={() => setShowFraudAverage(v => !v)}
+                    className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium border transition-colors ${
+                      showFraudAverage
+                        ? 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400'
+                        : 'border-gray-700 bg-gray-800 text-gray-500 hover:text-gray-300 hover:border-gray-600'
+                    }`}
+                  >
+                    <span className="inline-block w-4 h-0.5 flex-shrink-0" style={{ background: '#facc15' }} />
+                    Average
+                  </button>
+                  <button
+                    onClick={() => setShowFraudMedian(v => !v)}
+                    className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium border transition-colors ${
+                      showFraudMedian
+                        ? 'border-purple-400/50 bg-purple-400/10 text-purple-400'
+                        : 'border-gray-700 bg-gray-800 text-gray-500 hover:text-gray-300 hover:border-gray-600'
+                    }`}
+                  >
+                    <span className="inline-block w-4 h-0.5 flex-shrink-0" style={{ background: '#c084fc' }} />
+                    Median
+                  </button>
+                </div>
               </div>
             ) : (
               <div className="bg-gray-900 rounded-2xl flex items-center justify-center h-48 text-gray-600">

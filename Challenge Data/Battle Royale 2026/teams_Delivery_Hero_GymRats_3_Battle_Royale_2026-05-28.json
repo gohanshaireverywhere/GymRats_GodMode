@@ -1,0 +1,850 @@
+{
+  "version": 1,
+  "exported_at": "2026-05-28T11:29:59.984Z",
+  "challenge": {
+    "id": 3338506,
+    "name": "Delivery Hero GymRats 3: Battle Royale"
+  },
+  "filters": {
+    "startDate": "2026-05-08",
+    "endDate": "2026-05-22",
+    "mode": "count",
+    "teamSize": 4,
+    "teamCount": "8",
+    "minPoints": "39"
+  },
+  "teams": [
+    {
+      "id": "team-1",
+      "name": "Team #1",
+      "total_points": 1120.12,
+      "all_time_total_points": 1470.56,
+      "players": [
+        {
+          "id": 7675120,
+          "name": "its-a-me-mario",
+          "points": 148.48,
+          "all_time_points": 208.93,
+          "active_days": 9,
+          "archetype": "A"
+        },
+        {
+          "id": 7657375,
+          "name": "Robin Toebs",
+          "points": 133.74,
+          "all_time_points": 133.74,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 3985270,
+          "name": "Andrew Youssef",
+          "points": 131.97,
+          "all_time_points": 184.26,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 7665239,
+          "name": "Hoseok Lee",
+          "points": 128.09,
+          "all_time_points": 173.03,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 5402079,
+          "name": "Federico Arias",
+          "points": 115.6,
+          "all_time_points": 115.6,
+          "active_days": 7,
+          "archetype": "B"
+        },
+        {
+          "id": 7657586,
+          "name": "Kimia",
+          "points": 108.58,
+          "all_time_points": 125.02,
+          "active_days": 9,
+          "archetype": "A"
+        },
+        {
+          "id": 3929173,
+          "name": "Mecha",
+          "points": 79.15,
+          "all_time_points": 121.62,
+          "active_days": 11,
+          "archetype": "C"
+        },
+        {
+          "id": 3930138,
+          "name": "Devin Fiachra",
+          "points": 76.88,
+          "all_time_points": 99.38,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 7657768,
+          "name": "Lauren Alessandra Simon",
+          "points": 59.13,
+          "all_time_points": 59.13,
+          "active_days": 7,
+          "archetype": "D"
+        },
+        {
+          "id": 3930150,
+          "name": "Ziad",
+          "points": 56.79,
+          "all_time_points": 120.15,
+          "active_days": 4,
+          "archetype": "D"
+        },
+        {
+          "id": 7738750,
+          "name": "Ana Detsch",
+          "points": 41.08,
+          "all_time_points": 79.17,
+          "active_days": 6,
+          "archetype": "D"
+        },
+        {
+          "id": 7679656,
+          "name": "Anna G. Zosan",
+          "points": 40.65,
+          "all_time_points": 50.53,
+          "active_days": 6,
+          "archetype": "D"
+        }
+      ]
+    },
+    {
+      "id": "team-2",
+      "name": "Team #2",
+      "total_points": 1120.56,
+      "all_time_total_points": 1448.31,
+      "players": [
+        {
+          "id": 7665954,
+          "name": "Hyuntae Kim",
+          "points": 180.26,
+          "all_time_points": 245.06,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 5403226,
+          "name": "aqua-len",
+          "points": 143.61,
+          "all_time_points": 185.11,
+          "active_days": 12,
+          "archetype": "A"
+        },
+        {
+          "id": 3985300,
+          "name": "Sanda",
+          "points": 126.18,
+          "all_time_points": 168.78,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 5416712,
+          "name": "Irina Loskutova",
+          "points": 122.93,
+          "all_time_points": 171.3,
+          "active_days": 13,
+          "archetype": "A"
+        },
+        {
+          "id": 7648430,
+          "name": "Camila Santos Matos De Freitas Ribeiro",
+          "points": 102.26,
+          "all_time_points": 118.95,
+          "active_days": 11,
+          "archetype": "A"
+        },
+        {
+          "id": 7664845,
+          "name": "Dang Dien",
+          "points": 94.91,
+          "all_time_points": 111.44,
+          "active_days": 6,
+          "archetype": "B"
+        },
+        {
+          "id": 5396268,
+          "name": "Andrew Seth Wilkes",
+          "points": 76.61,
+          "all_time_points": 121.31,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 5561159,
+          "name": "Fatemeh hzd",
+          "points": 70.87,
+          "all_time_points": 73,
+          "active_days": 9,
+          "archetype": "C"
+        },
+        {
+          "id": 7657561,
+          "name": "Len",
+          "points": 59.6,
+          "all_time_points": 81,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 7664532,
+          "name": "Jungjae Park",
+          "points": 58.52,
+          "all_time_points": 71.83,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 7675433,
+          "name": "Adawy",
+          "points": 44.04,
+          "all_time_points": 53.08,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 7568200,
+          "name": "Gaye Kara",
+          "points": 40.77,
+          "all_time_points": 47.46,
+          "active_days": 4,
+          "archetype": "D"
+        }
+      ]
+    },
+    {
+      "id": "team-3",
+      "name": "Team #3",
+      "total_points": 1119.87,
+      "all_time_total_points": 1341.49,
+      "players": [
+        {
+          "id": 3928673,
+          "name": "Zouhair Guijjane",
+          "points": 264.65,
+          "all_time_points": 312.86,
+          "active_days": 13,
+          "archetype": "A"
+        },
+        {
+          "id": 5367564,
+          "name": "Shashith",
+          "points": 123.41,
+          "all_time_points": 123.41,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 3991834,
+          "name": "Dharmesh J",
+          "points": 104.17,
+          "all_time_points": 152.05,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 5368778,
+          "name": "Friedrich",
+          "points": 96.35,
+          "all_time_points": 133.77,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 5384676,
+          "name": "Hayk",
+          "points": 95.55,
+          "all_time_points": 114.41,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 5363017,
+          "name": "Idil Düzgün",
+          "points": 85.87,
+          "all_time_points": 98.55,
+          "active_days": 6,
+          "archetype": "B"
+        },
+        {
+          "id": 7664452,
+          "name": "Andrés Villanueva",
+          "points": 77.54,
+          "all_time_points": 112.89,
+          "active_days": 7,
+          "archetype": "D"
+        },
+        {
+          "id": 7657665,
+          "name": "Max Grinkov",
+          "points": 74.21,
+          "all_time_points": 74.21,
+          "active_days": 8,
+          "archetype": "C"
+        },
+        {
+          "id": 7657754,
+          "name": "Daniela Lopez Obregon",
+          "points": 59.34,
+          "all_time_points": 59.34,
+          "active_days": 4,
+          "archetype": "D"
+        },
+        {
+          "id": 5368586,
+          "name": "Salahuddin",
+          "points": 56.9,
+          "all_time_points": 78.11,
+          "active_days": 7,
+          "archetype": "D"
+        },
+        {
+          "id": 5373843,
+          "name": "Amen",
+          "points": 41.89,
+          "all_time_points": 41.89,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 4028288,
+          "name": "Vinicius Brito de Castro Dourado",
+          "points": 40,
+          "all_time_points": 40,
+          "active_days": 2,
+          "archetype": "D"
+        }
+      ]
+    },
+    {
+      "id": "team-4",
+      "name": "Team #4",
+      "total_points": 1118,
+      "all_time_total_points": 1377.7,
+      "players": [
+        {
+          "id": 3025172,
+          "name": "Arthur Allain",
+          "points": 224.4,
+          "all_time_points": 284.69,
+          "active_days": 15,
+          "archetype": "A"
+        },
+        {
+          "id": 7627162,
+          "name": "Swati Kholiya",
+          "points": 128.79,
+          "all_time_points": 162.17,
+          "active_days": 9,
+          "archetype": "A"
+        },
+        {
+          "id": 5371296,
+          "name": "Nikolai Romanenkov",
+          "points": 125.13,
+          "all_time_points": 153.8,
+          "active_days": 12,
+          "archetype": "A"
+        },
+        {
+          "id": 7658130,
+          "name": "Petra",
+          "points": 120.42,
+          "all_time_points": 155.67,
+          "active_days": 13,
+          "archetype": "A"
+        },
+        {
+          "id": 7658096,
+          "name": "Afonso Queirós",
+          "points": 92.33,
+          "all_time_points": 92.33,
+          "active_days": 11,
+          "archetype": "A"
+        },
+        {
+          "id": 7726611,
+          "name": "Jae Hyung Rhee",
+          "points": 83.26,
+          "all_time_points": 133.88,
+          "active_days": 6,
+          "archetype": "B"
+        },
+        {
+          "id": 5403401,
+          "name": "Keigo Andrade",
+          "points": 80.18,
+          "all_time_points": 94.57,
+          "active_days": 9,
+          "archetype": "C"
+        },
+        {
+          "id": 7685193,
+          "name": "Awo Tee",
+          "points": 70.53,
+          "all_time_points": 79.26,
+          "active_days": 8,
+          "archetype": "C"
+        },
+        {
+          "id": 7658530,
+          "name": "Merey Zholdas",
+          "points": 58.06,
+          "all_time_points": 70.56,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 3990436,
+          "name": "Piyush",
+          "points": 52.3,
+          "all_time_points": 52.3,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 7662134,
+          "name": "Vitor",
+          "points": 42.94,
+          "all_time_points": 49.75,
+          "active_days": 10,
+          "archetype": "C"
+        },
+        {
+          "id": 5396112,
+          "name": "Bernadetta Wąsowska",
+          "points": 39.66,
+          "all_time_points": 48.71,
+          "active_days": 6,
+          "archetype": "D"
+        }
+      ]
+    },
+    {
+      "id": "team-5",
+      "name": "Team #5",
+      "total_points": 1121.69,
+      "all_time_total_points": 1353.13,
+      "players": [
+        {
+          "id": 3199282,
+          "name": "Kasun",
+          "points": 227.2,
+          "all_time_points": 290.14,
+          "active_days": 15,
+          "archetype": "A"
+        },
+        {
+          "id": 3990455,
+          "name": "Lucila",
+          "points": 138.1,
+          "all_time_points": 164.32,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 49911,
+          "name": "Thabata",
+          "points": 117.13,
+          "all_time_points": 133.91,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 7656891,
+          "name": "Garvit Verma",
+          "points": 110.22,
+          "all_time_points": 115.25,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 7661649,
+          "name": "Sesha Gagan Tipparaju",
+          "points": 94.33,
+          "all_time_points": 94.33,
+          "active_days": 9,
+          "archetype": "A"
+        },
+        {
+          "id": 3930475,
+          "name": "Kai HB",
+          "points": 81.73,
+          "all_time_points": 120.59,
+          "active_days": 7,
+          "archetype": "B"
+        },
+        {
+          "id": 5367494,
+          "name": "Inessa",
+          "points": 73.63,
+          "all_time_points": 89.17,
+          "active_days": 6,
+          "archetype": "D"
+        },
+        {
+          "id": 5374146,
+          "name": "Miti Kotak",
+          "points": 72.47,
+          "all_time_points": 82.47,
+          "active_days": 6,
+          "archetype": "D"
+        },
+        {
+          "id": 7664549,
+          "name": "Bahaa Hussein",
+          "points": 60.24,
+          "all_time_points": 69.13,
+          "active_days": 6,
+          "archetype": "D"
+        },
+        {
+          "id": 7683354,
+          "name": "Yoonkyoung",
+          "points": 52.2,
+          "all_time_points": 75.83,
+          "active_days": 3,
+          "archetype": "D"
+        },
+        {
+          "id": 7664497,
+          "name": "Fatemeh",
+          "points": 50.65,
+          "all_time_points": 58.68,
+          "active_days": 8,
+          "archetype": "C"
+        },
+        {
+          "id": 3938803,
+          "name": "Ishan",
+          "points": 43.79,
+          "all_time_points": 59.32,
+          "active_days": 2,
+          "archetype": "D"
+        }
+      ]
+    },
+    {
+      "id": "team-6",
+      "name": "Team #6",
+      "total_points": 1120.77,
+      "all_time_total_points": 1359.96,
+      "players": [
+        {
+          "id": 3944468,
+          "name": "Carlos Ferraz",
+          "points": 229.01,
+          "all_time_points": 310.94,
+          "active_days": 14,
+          "archetype": "A"
+        },
+        {
+          "id": 5559385,
+          "name": "Henk",
+          "points": 135.92,
+          "all_time_points": 142.03,
+          "active_days": 12,
+          "archetype": "A"
+        },
+        {
+          "id": 5374080,
+          "name": "Swannie",
+          "points": 115.04,
+          "all_time_points": 125.74,
+          "active_days": 11,
+          "archetype": "A"
+        },
+        {
+          "id": 3931131,
+          "name": "Funda",
+          "points": 113.59,
+          "all_time_points": 123.22,
+          "active_days": 9,
+          "archetype": "A"
+        },
+        {
+          "id": 7661146,
+          "name": "Reem Ahmed",
+          "points": 90.25,
+          "all_time_points": 101.58,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 7657690,
+          "name": "Azucena Barron",
+          "points": 80.73,
+          "all_time_points": 112.93,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 7730237,
+          "name": "Ca",
+          "points": 73.49,
+          "all_time_points": 73.49,
+          "active_days": 6,
+          "archetype": "D"
+        },
+        {
+          "id": 7657585,
+          "name": "Mikhail Efimov",
+          "points": 70.07,
+          "all_time_points": 73.41,
+          "active_days": 10,
+          "archetype": "C"
+        },
+        {
+          "id": 3951568,
+          "name": "Zienia",
+          "points": 66.63,
+          "all_time_points": 105.29,
+          "active_days": 7,
+          "archetype": "D"
+        },
+        {
+          "id": 3991150,
+          "name": "Julia",
+          "points": 53.25,
+          "all_time_points": 55.91,
+          "active_days": 10,
+          "archetype": "C"
+        },
+        {
+          "id": 7664570,
+          "name": "Nidhin Damodaran",
+          "points": 51.35,
+          "all_time_points": 78.57,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 7675547,
+          "name": "Aliya",
+          "points": 41.43,
+          "all_time_points": 56.86,
+          "active_days": 5,
+          "archetype": "D"
+        }
+      ]
+    },
+    {
+      "id": "team-7",
+      "name": "Team #7",
+      "total_points": 1120.57,
+      "all_time_total_points": 1441.75,
+      "players": [
+        {
+          "id": 7657784,
+          "name": "Aamruth Shankar",
+          "points": 163.81,
+          "all_time_points": 163.81,
+          "active_days": 9,
+          "archetype": "A"
+        },
+        {
+          "id": 7661347,
+          "name": "Maria",
+          "points": 161.7,
+          "all_time_points": 202.58,
+          "active_days": 11,
+          "archetype": "A"
+        },
+        {
+          "id": 3929525,
+          "name": "Chara",
+          "points": 139.75,
+          "all_time_points": 200.45,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 5510826,
+          "name": "Jackie Leonardy",
+          "points": 121.23,
+          "all_time_points": 121.23,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 3886525,
+          "name": "Svetlana",
+          "points": 86.61,
+          "all_time_points": 153.94,
+          "active_days": 8,
+          "archetype": "A"
+        },
+        {
+          "id": 7657647,
+          "name": "Tayna Garcia",
+          "points": 83.99,
+          "all_time_points": 117.82,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 5367958,
+          "name": "Harshit Saxena",
+          "points": 77.38,
+          "all_time_points": 77.38,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 7658103,
+          "name": "Jorge",
+          "points": 69.05,
+          "all_time_points": 86.93,
+          "active_days": 10,
+          "archetype": "C"
+        },
+        {
+          "id": 3929128,
+          "name": "Andres Avila",
+          "points": 66.94,
+          "all_time_points": 97.37,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 7659615,
+          "name": "Min (Kyungmin Lee)",
+          "points": 53.68,
+          "all_time_points": 60.02,
+          "active_days": 9,
+          "archetype": "C"
+        },
+        {
+          "id": 3931970,
+          "name": "Fabian",
+          "points": 51.1,
+          "all_time_points": 82.73,
+          "active_days": 3,
+          "archetype": "D"
+        },
+        {
+          "id": 7657560,
+          "name": "Alex Z",
+          "points": 45.33,
+          "all_time_points": 77.5,
+          "active_days": 4,
+          "archetype": "D"
+        }
+      ]
+    },
+    {
+      "id": "team-8",
+      "name": "Team #8",
+      "total_points": 1121.03,
+      "all_time_total_points": 1554.65,
+      "players": [
+        {
+          "id": 3951817,
+          "name": "Junyu",
+          "points": 158.59,
+          "all_time_points": 196.1,
+          "active_days": 15,
+          "archetype": "A"
+        },
+        {
+          "id": 5371679,
+          "name": "Atai",
+          "points": 157.85,
+          "all_time_points": 189.24,
+          "active_days": 11,
+          "archetype": "A"
+        },
+        {
+          "id": 7657679,
+          "name": "Ygor P",
+          "points": 150.79,
+          "all_time_points": 208.64,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 3951531,
+          "name": "Sandra",
+          "points": 120.24,
+          "all_time_points": 190.05,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 5396179,
+          "name": "Maite",
+          "points": 86.31,
+          "all_time_points": 99.55,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 3024573,
+          "name": "Oumaima",
+          "points": 85.85,
+          "all_time_points": 122.88,
+          "active_days": 10,
+          "archetype": "A"
+        },
+        {
+          "id": 5461919,
+          "name": "Anya",
+          "points": 71.17,
+          "all_time_points": 97.2,
+          "active_days": 3,
+          "archetype": "D"
+        },
+        {
+          "id": 4138643,
+          "name": "Olya Sh",
+          "points": 69.16,
+          "all_time_points": 100.97,
+          "active_days": 5,
+          "archetype": "D"
+        },
+        {
+          "id": 7665793,
+          "name": "Vishal",
+          "points": 66.92,
+          "all_time_points": 66.92,
+          "active_days": 9,
+          "archetype": "C"
+        },
+        {
+          "id": 7679681,
+          "name": "Ayushi Gupta",
+          "points": 58.93,
+          "all_time_points": 105.8,
+          "active_days": 14,
+          "archetype": "C"
+        },
+        {
+          "id": 4007316,
+          "name": "Javiera",
+          "points": 48.56,
+          "all_time_points": 70.56,
+          "active_days": 6,
+          "archetype": "D"
+        },
+        {
+          "id": 5445856,
+          "name": "Yenling Wong",
+          "points": 46.67,
+          "all_time_points": 106.73,
+          "active_days": 2,
+          "archetype": "D"
+        }
+      ]
+    }
+  ]
+}

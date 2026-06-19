@@ -1,8 +1,6 @@
 node_modules/
 dist/
 
-# Local challenge data — contains personal workout data, do not publish
-Challenge Data/
 BR/
 
 # OS / editor

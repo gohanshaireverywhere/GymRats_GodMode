@@ -7,4 +7,5 @@ BR/
 
 # OS / editor
 .DS_Store
+**/.DS_Store
 *.local

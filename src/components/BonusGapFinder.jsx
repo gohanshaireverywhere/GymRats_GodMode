@@ -77,7 +77,7 @@ export default function BonusGapFinder({ member, data, currentTotalPoints }) {
     playerGrants.filter(g => g.rotation === rotNum);
 
   const grantedPtsForRotation = (rotNum) =>
-    grantsForRotation(rotNum).reduce((s, g) => s + g.bonusPtsGranted, 0);
+    grantsForRotation(rotNum).reduce((s, g) => s + (g.grantAmount || 0), 0);
 
   // Gap analysis
   const gapRecommendations = useMemo(() => {
@@ -86,21 +86,38 @@ export default function BonusGapFinder({ member, data, currentTotalPoints }) {
     const remaining = Math.max(0, effectiveEntry.bonusPtsPerPlayer - alreadyGranted);
     if (remaining <= 0) return [];
     const playerCheckIns = data.check_ins.filter(ci => ci.account_id === member.id);
-    return findGaps(playerCheckIns, remaining, capValue);
+    return findGaps(
+      playerCheckIns,
+      member.id,
+      effectiveEntry.rotation.num,
+      remaining,
+      capValue,
+      completedRotations.map(r => r.rotation)
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [effectiveEntry, data.check_ins, member.id, capValue, playerGrants.length]);
+  }, [effectiveEntry, data.check_ins, member.id, capValue, playerGrants.length, completedRotations]);
 
   const handleMarkGranted = (rec, rotEntry) => {
-    const activity = rec.checkIn.check_in_activities?.[0]?.platform_activity;
+    const ci = rec.checkIn;
     addGrant({
-      checkInId: rec.checkIn.id,
+      grantId: rec.grantId,
       playerId: member.id,
       playerName: member.full_name,
       rotation: rotEntry.rotation.num,
-      bonusPtsGranted: rec.bonusPtsFromThisDay,
-      originalActivity: activity || rec.checkIn.title || 'Workout',
-      originalPts: rec.checkIn.points || 0,
-      occurredAt: rec.checkIn.occurred_at,
+      date: rec.day,
+      grantAmount: rec.netGrant,
+      newActivityPts: rec.newActivityPts,
+      original: {
+        checkInId: ci.id,
+        title: ci.title || null,
+        activityType: ci.check_in_activities?.[0]?.platform_activity || null,
+        occurredAt: ci.occurred_at,
+        points: ci.points || 0,
+        durationMillis: ci.duration_millis || null,
+        distanceMiles: ci.distance_miles ? parseFloat(ci.distance_miles) : null,
+        calories: ci.calories || null,
+        steps: ci.steps || null,
+      },
     });
   };
 
@@ -275,15 +292,15 @@ export default function BonusGapFinder({ member, data, currentTotalPoints }) {
                                 <div className="flex items-center gap-1.5 mt-2 text-xs flex-wrap">
                                   <span className="bg-gray-700 text-gray-300 px-1.5 py-0.5 rounded">{formatPoints(originalPts)} pts</span>
                                   <span className="text-gray-600">→</span>
-                                  <span className={`px-1.5 py-0.5 rounded font-semibold ${rec.isPartialGrant ? 'bg-amber-500/20 text-amber-300' : 'bg-gray-700 text-gray-300'}`}>
-                                    Bonus {formatPoints(rec.exactBonusActivityPts)} pts
-                                    {rec.isPartialGrant && ' ← exact value'}
+                                  <span className={`px-1.5 py-0.5 rounded font-semibold ${rec.isLastDay ? 'bg-amber-500/20 text-amber-300' : 'bg-gray-700 text-gray-300'}`}>
+                                    Bonus {formatPoints(rec.newActivityPts)} pts
+                                    {rec.isLastDay && ' ← exact value'}
                                   </span>
                                   <span className="text-gray-600">day used: {formatPoints(rec.rawDayTotal)} / {capValue} pts</span>
                                 </div>
                               </div>
                               <div className="text-right flex-shrink-0 ml-2">
-                                <div className="text-base font-bold text-emerald-400">+{formatPoints(rec.dayCapacity)}</div>
+                                <div className="text-base font-bold text-emerald-400">+{formatPoints(rec.netGrant)}</div>
                                 <div className="text-xs text-gray-600">net added to total</div>
                               </div>
                             </div>

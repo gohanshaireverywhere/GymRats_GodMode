@@ -1,9 +1,9 @@
 import { useState, useMemo, useRef } from 'react';
-import { ROTATIONS } from '../data/rotations';
+import { ROTATIONS, getRotationStatus } from '../data/rotations';
 import { computeRotationResults, findGaps } from '../utils/computeRotationBonus';
 import { useBonusGrants } from '../context/BonusGrantsContext';
 import { useSettings } from '../context/SettingsContext';
-import { formatPoints, formatDuration, formatDistance } from '../utils/dataProcessor';
+import { formatPoints, formatDuration, formatDistance, getLocalDay } from '../utils/dataProcessor';
 import Avatar from './Avatar';
 
 function formatDate(dayStr) {
@@ -16,18 +16,6 @@ function formatDateTime(isoStr) {
   return new Date(isoStr).toLocaleDateString('en-US', {
     month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
   });
-}
-
-function getRotationStatus(rotation) {
-  const now = new Date();
-  const start = new Date(rotation.start);
-  const end = new Date(rotation.end);
-  const nextSun = new Date(end);
-  nextSun.setDate(nextSun.getDate() + ((7 - nextSun.getDay()) % 7 || 7));
-  if (now < start) return 'future';
-  if (now < end) return 'ongoing';
-  if (now < nextSun) return 'grace';
-  return 'closed';
 }
 
 function StatusBadge({ status }) {
@@ -55,14 +43,22 @@ function PlayerGapCard({ member, data, rotEntry, capValue, currentTotalPoints, c
   const bonusOwed = rotEntry.bonusPtsPerPlayer;
   const remaining = Math.max(0, bonusOwed - grantedSoFar);
   const done = remaining <= 0;
+  const sortedGrants = [...playerGrants].sort((a, b) => a.date.localeCompare(b.date));
+  const grantedDaysKey = sortedGrants.map(g => g.date).join(',');
 
-  // Always compute recommendations for the FULL bonus amount, not the shrinking
-  // `remaining`. This makes the list stable regardless of confirmation order —
-  // cards don't move or change values as you click "Mark as Granted".
+  // Recommend edits ONLY for the still-owed `remaining`, and only over days that
+  // have NOT already been granted. Excluding granted days keeps the list stable
+  // across data re-exports: once a day's bonus is applied in GymRats (inflating its
+  // points) and re-imported, that day is skipped here instead of being re-derived
+  // onto a different day — which used to orphan the grant and risk double-granting.
   const gapRecommendations = useMemo(() => {
-    const playerCheckIns = data.check_ins.filter(ci => ci.account_id === member.id);
-    return findGaps(playerCheckIns, member.id, rotEntry.rotation.num, bonusOwed, capValue, completedRotations);
-  }, [data.check_ins, member.id, bonusOwed, capValue, rotEntry.rotation.num, completedRotations]);
+    if (remaining <= 0.001) return [];
+    const grantedDays = new Set(grantedDaysKey ? grantedDaysKey.split(',') : []);
+    const playerCheckIns = data.check_ins.filter(ci =>
+      ci.account_id === member.id && !grantedDays.has(getLocalDay(ci.occurred_at, ci.timezone))
+    );
+    return findGaps(playerCheckIns, member.id, rotEntry.rotation.num, remaining, capValue, completedRotations);
+  }, [data.check_ins, member.id, remaining, capValue, rotEntry.rotation.num, completedRotations, grantedDaysKey]);
 
   const handleMarkGranted = (rec) => {
     const ci = rec.checkIn;
@@ -146,15 +142,60 @@ function PlayerGapCard({ member, data, rotEntry, capValue, currentTotalPoints, c
             ) : null;
           })()}
 
-          {/* Unified recommendation list — stable regardless of confirmation order */}
-          {gapRecommendations.length > 0 ? (
+          {/* Already granted — rendered directly from stored grants so it stays
+              accurate even after check-ins are edited in GymRats and re-imported. */}
+          {sortedGrants.length > 0 && (
+            <div className="space-y-2">
+              <div className="text-xs text-emerald-400/80 uppercase tracking-wider mb-1">Already granted ({sortedGrants.length})</div>
+              {sortedGrants.map(g => {
+                const o = g.original || {};
+                return (
+                  <div key={g.grantId} className="rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-3">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 flex-wrap mb-1.5">
+                          <span className="text-xs font-semibold text-gray-200 truncate">{o.title || o.activityType || 'Workout'}</span>
+                          <span className="text-xs text-gray-600">{o.occurredAt ? formatDateTime(o.occurredAt) : formatDate(g.date)}</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 text-xs flex-wrap">
+                          <span className="bg-gray-700 text-gray-400 px-1.5 py-0.5 rounded">originally {formatPoints(o.points || 0)} pts</span>
+                          <span className="text-gray-600">→ changed to</span>
+                          <span className="px-2 py-0.5 rounded font-bold bg-emerald-500/20 text-emerald-300">{g.newActivityPts} pts</span>
+                        </div>
+                        <div className="mt-2 bg-gray-900/60 rounded-lg px-2 py-1.5 space-y-0.5">
+                          <div className="text-xs text-gray-500 uppercase tracking-wider">Original (for rollback)</div>
+                          <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-gray-500">
+                            <span className="text-gray-400 capitalize">{o.title || o.activityType || 'Workout'}</span>
+                            <span>⭐ {formatPoints(o.points || 0)} pts</span>
+                            {o.durationMillis > 0 && <span>⏱ {formatDuration(o.durationMillis)}</span>}
+                            {o.distanceMiles > 0 && <span>📍 {formatDistance(o.distanceMiles, settings.distanceUnit)}</span>}
+                            {o.calories > 0 && <span>🔥 {o.calories} cal</span>}
+                          </div>
+                          <div className="text-xs text-gray-600">ID: {o.checkInId}</div>
+                        </div>
+                      </div>
+                      <div className="text-right flex-shrink-0">
+                        <div className="text-xl font-black text-emerald-400">+{formatPoints(g.grantAmount || 0)}</div>
+                        <div className="text-xs text-gray-500">net pts</div>
+                      </div>
+                    </div>
+                    <div className="mt-2.5 flex items-center justify-between">
+                      <span className="text-xs text-emerald-400 font-semibold">✅ Granted — {formatDate(g.date)}</span>
+                      <button onClick={() => removeGrant(g.grantId)} className="text-xs text-gray-600 hover:text-red-400 transition-colors">Undo</button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Remaining to grant — findGaps over not-yet-granted days for the still-owed amount */}
+          {remaining > 0.001 && (gapRecommendations.length > 0 ? (
             <div className="space-y-2">
               <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Check-ins to edit</div>
-              {!done && (
-                <p className="text-xs text-gray-600 mb-2">
-                  Open each check-in in GymRats and change its activity type to a bonus activity with the exact point value shown. Confirm each one here after saving it.
-                </p>
-              )}
+              <p className="text-xs text-gray-600 mb-2">
+                Open each check-in in GymRats and change its activity type to a bonus activity with the exact point value shown. Confirm each one here after saving it.
+              </p>
               {gapRecommendations.map((rec) => {
                 const granted = isGranted(rec.grantId);
                 const grant = getGrant(rec.grantId);
@@ -280,20 +321,21 @@ function PlayerGapCard({ member, data, rotEntry, capValue, currentTotalPoints, c
                   </div>
                 );
               })}
-              {done && (
-                <div className="text-center text-emerald-400 text-sm font-semibold py-2">
-                  🎉 All {bonusOwed} pts granted!
-                </div>
-              )}
               {gapRecommendations.shortfall > 0 && (
                 <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-3 text-xs text-amber-300">
-                  ⚠️ {gapRecommendations.shortfall} pts cannot be granted — not enough pre-rotation check-ins with cap room (Apr 30 – May 28).
+                  ⚠️ {formatPoints(gapRecommendations.shortfall)} pts cannot be granted — not enough un-granted check-ins with cap room.
                 </div>
               )}
             </div>
           ) : (
             <div className="text-xs text-gray-600 text-center py-3">
-              No pre-rotation check-ins with available cap room found.
+              No un-granted check-ins with available cap room found for the remaining {formatPoints(remaining)} pts.
+            </div>
+          ))}
+
+          {done && (
+            <div className="text-center text-emerald-400 text-sm font-semibold py-2">
+              🎉 All {bonusOwed} pts granted!
             </div>
           )}
         </div>
@@ -358,19 +400,31 @@ export default function GapFinder({ data, memberStats }) {
     }));
   }, [rotationResult, data.members, memberStats]);
 
-  // Calculate all unique bonus activity types needed for this rotation.
-  // Uses findGaps directly — same function as the player cards — so the summary
-  // always matches what's shown per player.
+  // Calculate the unique bonus activity types still NEEDED for this rotation.
+  // Mirrors the per-player cards: for each player it looks only at the still-owed
+  // amount over days that haven't been granted yet, so the summary shrinks as
+  // grants are confirmed instead of listing already-created types forever.
   const activityTypesSummary = useMemo(() => {
     if (!rotationResult || !selectedRotation) return { created: [], needsCreation: [], totalTypes: 0 };
 
     const activityMap = new Map(); // key: pts.toFixed(2) → [player names]
 
-    for (const { member } of eligibleMembers) {
-      const playerCheckIns = data.check_ins.filter(ci => ci.account_id === member.id);
-      const gaps = findGaps(playerCheckIns, member.id, selectedRotation.num, rotationResult.bonusPtsPerPlayer, capValue, completedRotations);
+    // Remaining recommendations for one player: owed − already granted, over
+    // not-yet-granted days (same logic as PlayerGapCard).
+    const remainingGapsFor = (member, owed) => {
+      const playerGrants = grants.filter(g => g.playerId === member.id && g.rotation === selectedRotation.num);
+      const grantedSoFar = playerGrants.reduce((s, g) => s + (g.grantAmount || 0), 0);
+      const remaining = Math.max(0, owed - grantedSoFar);
+      if (remaining <= 0.001) return [];
+      const grantedDays = new Set(playerGrants.map(g => g.date));
+      const playerCheckIns = data.check_ins.filter(ci =>
+        ci.account_id === member.id && !grantedDays.has(getLocalDay(ci.occurred_at, ci.timezone))
+      );
+      return findGaps(playerCheckIns, member.id, selectedRotation.num, remaining, capValue, completedRotations);
+    };
 
-      for (const rec of gaps) {
+    for (const { member } of eligibleMembers) {
+      for (const rec of remainingGapsFor(member, rotationResult.bonusPtsPerPlayer)) {
         const key = rec.newActivityPts.toFixed(2);
         if (!activityMap.has(key)) activityMap.set(key, []);
         activityMap.get(key).push(member.full_name);
@@ -379,9 +433,7 @@ export default function GapFinder({ data, memberStats }) {
 
     for (const section of upsetSections) {
       for (const { member } of section.members) {
-        const playerCheckIns = data.check_ins.filter(ci => ci.account_id === member.id);
-        const gaps = findGaps(playerCheckIns, member.id, selectedRotation.num, section.bonusPtsPerPlayer, capValue, completedRotations);
-        for (const rec of gaps) {
+        for (const rec of remainingGapsFor(member, section.bonusPtsPerPlayer)) {
           const key = rec.newActivityPts.toFixed(2);
           if (!activityMap.has(key)) activityMap.set(key, []);
           activityMap.get(key).push(member.full_name);
@@ -412,7 +464,7 @@ export default function GapFinder({ data, memberStats }) {
       needsCreation: allTypes.filter(t => !t.exists),
       totalTypes: allTypes.length,
     };
-  }, [eligibleMembers, upsetSections, rotationResult, selectedRotation, data.check_ins, capValue, completedRotations]);
+  }, [eligibleMembers, upsetSections, rotationResult, selectedRotation, data.check_ins, capValue, completedRotations, grants]);
 
   const handleImport = async (e) => {
     const file = e.target.files?.[0];
@@ -494,29 +546,40 @@ export default function GapFinder({ data, memberStats }) {
             <div className="bg-gray-900 rounded-2xl p-10 text-center text-gray-600">
               Featured team not found in data.
             </div>
-          ) : rotationResult.victories === 0 ? (
+          ) : (rotationResult.victories === 0 && upsetSections.length === 0) ? (
             <div className="bg-gray-900 rounded-2xl p-10 text-center text-gray-600">
               <div className="text-4xl mb-3">🤷</div>
-              <p>{rotationResult.featuredTeamName} did not win any matchups — no bonus to grant.</p>
+              <p>{rotationResult.featuredTeamName} neither won nor lost any matchups — no bonus to grant.</p>
             </div>
           ) : (
             <>
-              <div className="bg-gray-900 rounded-2xl p-5 flex flex-wrap items-center gap-6">
-                <div>
-                  <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Featured team</div>
-                  <div className="text-lg font-bold text-white">{rotationResult.featuredTeamName}</div>
-                </div>
-                <div>
-                  <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Bonus per player</div>
-                  <div className="text-lg font-bold text-orange-400">
-                    {rotationResult.victories} victories × 10 = <span className="text-white">{rotationResult.bonusPtsPerPlayer} pts</span>
+              {rotationResult.victories > 0 ? (
+                <div className="bg-gray-900 rounded-2xl p-5 flex flex-wrap items-center gap-6">
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Featured team</div>
+                    <div className="text-lg font-bold text-white">{rotationResult.featuredTeamName}</div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Bonus per player</div>
+                    <div className="text-lg font-bold text-orange-400">
+                      {rotationResult.victories} victories × 10 = <span className="text-white">{rotationResult.bonusPtsPerPlayer} pts</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Eligible players</div>
+                    <div className="text-lg font-bold text-white">{eligibleMembers.length}</div>
                   </div>
                 </div>
-                <div>
-                  <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Eligible players</div>
-                  <div className="text-lg font-bold text-white">{eligibleMembers.length}</div>
+              ) : (
+                <div className="bg-gray-900 rounded-2xl p-5 border border-sky-500/20">
+                  <div className="text-lg font-bold text-white mb-1">
+                    🤷 {rotationResult.featuredTeamName} was upset by every opponent
+                  </div>
+                  <p className="text-sm text-gray-400">
+                    No featured-team bonus this rotation — but the upset winners below each earn <span className="text-sky-400 font-semibold">+10</span>.
+                  </p>
                 </div>
-              </div>
+              )}
 
               {/* Bonus Activity Types Summary - Collapsible */}
               <button
@@ -603,19 +666,21 @@ export default function GapFinder({ data, memberStats }) {
                 </div>
               )}
 
-              <div className="space-y-3">
-                {eligibleMembers.map(({ member, currentTotalPoints }) => (
-                  <PlayerGapCard
-                    key={member.id}
-                    member={member}
-                    data={data}
-                    rotEntry={{ rotation: selectedRotation, ...rotationResult }}
-                    capValue={capValue}
-                    currentTotalPoints={currentTotalPoints}
-                    completedRotations={completedRotations}
-                  />
-                ))}
-              </div>
+              {rotationResult.victories > 0 && (
+                <div className="space-y-3">
+                  {eligibleMembers.map(({ member, currentTotalPoints }) => (
+                    <PlayerGapCard
+                      key={member.id}
+                      member={member}
+                      data={data}
+                      rotEntry={{ rotation: selectedRotation, ...rotationResult }}
+                      capValue={capValue}
+                      currentTotalPoints={currentTotalPoints}
+                      completedRotations={completedRotations}
+                    />
+                  ))}
+                </div>
+              )}
 
               {upsetSections.map(section => (
                 <div key={section.teamId} className="space-y-3">

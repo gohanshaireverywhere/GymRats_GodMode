@@ -11,3 +11,21 @@ export const ROTATIONS = [
 
 export const CLASSIFICATION_START = '2026-04-30T00:00:00';
 export const CLASSIFICATION_END = '2026-05-28T23:59:59'; // Day before Rotation 1 starts
+
+/**
+ * Lifecycle status of a rotation relative to now:
+ *   future  — not started yet
+ *   ongoing — currently running
+ *   grace   — ended, but players can still submit past check-ins until the next Sunday
+ *   closed  — finished and past the grace period; safe to grant bonuses
+ */
+export function getRotationStatus(rotation, now = new Date()) {
+  const start = new Date(rotation.start);
+  const end = new Date(rotation.end);
+  const nextSun = new Date(end);
+  nextSun.setDate(nextSun.getDate() + ((7 - nextSun.getDay()) % 7 || 7));
+  if (now < start) return 'future';
+  if (now < end) return 'ongoing';
+  if (now < nextSun) return 'grace';
+  return 'closed';
+}

@@ -79,6 +79,63 @@ export function computeRotationResults(data, rotation, dailyCap, grants = []) {
   };
 }
 
+/**
+ * Aggregate the total bonus each player is OWED across a set of rotations
+ * (cumulative). Owed bonus comes from two sources per rotation:
+ *   - featured team wins: `victories * 10` for each active featured-team player
+ *   - upsets: a flat +10 for each active player on a team that beat the featured team
+ * A player is on exactly one team per rotation, so the two sources never overlap.
+ *
+ * Pass only completed rotations if you want "owed so far". `grants` is forwarded
+ * to computeRotationResults so bonus-inflated check-ins are restored before scoring.
+ *
+ * @returns Map<playerId, { total, byRotation: [{ num, label, expected, kind, teamName }] }>
+ */
+export function computeExpectedBonusByPlayer(data, rotations, dailyCap, grants = []) {
+  const byPlayer = new Map();
+  const ensure = (id) => {
+    if (!byPlayer.has(id)) byPlayer.set(id, { total: 0, byRotation: [] });
+    return byPlayer.get(id);
+  };
+
+  for (const rotation of rotations) {
+    const res = computeRotationResults(data, rotation, dailyCap, grants);
+    if (!res) continue;
+
+    // Featured-team winners
+    if (res.bonusPtsPerPlayer > 0) {
+      for (const id of res.eligiblePlayerIds) {
+        const entry = ensure(id);
+        entry.total += res.bonusPtsPerPlayer;
+        entry.byRotation.push({
+          num: rotation.num,
+          label: rotation.label,
+          expected: res.bonusPtsPerPlayer,
+          kind: 'featured',
+          teamName: res.featuredTeamName,
+        });
+      }
+    }
+
+    // Upset winners
+    for (const upset of res.upsets) {
+      for (const id of upset.eligiblePlayerIds) {
+        const entry = ensure(id);
+        entry.total += upset.bonusPtsPerPlayer;
+        entry.byRotation.push({
+          num: rotation.num,
+          label: rotation.label,
+          expected: upset.bonusPtsPerPlayer,
+          kind: 'upset',
+          teamName: upset.teamName,
+        });
+      }
+    }
+  }
+
+  return byPlayer;
+}
+
 // Build day-capacity infos from a set of check-ins filtered to a date window.
 function buildDayInfos(checkIns, windowStartMs, windowEndMs, capValue) {
   const byDay = {};
@@ -156,6 +213,12 @@ function greedyAllocate(dayInfos, remaining, capValue, memberId, rotationNum, so
  *   { type: 'rotation', rotationNum: N, rotationLabel: 'Rotation N', start, end }
  *
  * Returns an array sorted by date asc with a `.shortfall` property.
+ *
+ * Only pass check-ins on days that are still available (callers exclude days that
+ * already carry a confirmed bonus grant), and pass the still-owed `bonusTotal`
+ * (owed − already granted). This keeps recommendations stable across re-exports:
+ * once a day is granted, it drops out of the candidate pool instead of being
+ * re-derived and re-recommended.
  */
 export function findGaps(
   playerCheckIns, memberId, rotationNum, bonusTotal, capValue,

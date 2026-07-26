@@ -809,7 +809,7 @@ export default function GapFinderV2({ data, memberStats }) {
                 </div>
               ))}
             </>
-          )}
+            )}
 
           {/* Multi-rotation combined view */}
           {selectedRotationList.length >= 2 && mergedRotationData && (

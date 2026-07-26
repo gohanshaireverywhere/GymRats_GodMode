@@ -381,17 +381,81 @@ export default function GapFinderV2({ data, memberStats }) {
     return computeRotationResults(data, selectedRotation, settings.dailyPointsCap, grants);
   }, [data, selectedRotation, computable, settings.dailyPointsCap]);
 
+  // Multi-rotation merge: combine results across 2+ selected rotations
+  const mergedRotationData = useMemo(() => {
+    if (selectedRotationList.length < 2) return null;
+
+    const allComputable = selectedRotationList.every(r => {
+      const st = getRotationStatus(r);
+      return st === 'closed' || st === 'grace';
+    });
+    if (!allComputable) return null;
+
+    const rotationResultsByNum = new Map();
+    for (const rot of selectedRotationList) {
+      const res = computeRotationResults(data, rot, settings.dailyPointsCap, grants);
+      if (res) rotationResultsByNum.set(rot.num, res);
+    }
+
+    if (rotationResultsByNum.size === 0) return null;
+
+    const perPlayerOwed = new Map();
+    let anyFeaturedVictories = false;
+
+    for (const rot of selectedRotationList) {
+      const res = rotationResultsByNum.get(rot.num);
+      if (!res) continue;
+
+      if (res.bonusPtsPerPlayer > 0) {
+        anyFeaturedVictories = true;
+        for (const id of res.eligiblePlayerIds) {
+          const entry = perPlayerOwed.get(id) ?? { total: 0, parts: [] };
+          entry.total += res.bonusPtsPerPlayer;
+          entry.parts.push({ rotNum: rot.num, kind: 'featured', teamName: res.featuredTeamName, amount: res.bonusPtsPerPlayer });
+          perPlayerOwed.set(id, entry);
+        }
+      }
+
+      for (const upset of res.upsets) {
+        for (const id of upset.eligiblePlayerIds) {
+          const entry = perPlayerOwed.get(id) ?? { total: 0, parts: [] };
+          entry.total += upset.bonusPtsPerPlayer;
+          entry.parts.push({ rotNum: rot.num, kind: 'upset', teamName: upset.teamName, amount: upset.bonusPtsPerPlayer });
+          perPlayerOwed.set(id, entry);
+        }
+      }
+    }
+
+    return { perPlayerOwed, anyFeaturedVictories };
+  }, [selectedRotationList, data, settings.dailyPointsCap, grants]);
+
   const eligibleMembers = useMemo(() => {
-    if (!rotationResult) return [];
-    return [...rotationResult.eligiblePlayerIds]
-      .map(id => {
-        const member = data.members.find(m => m.id === id);
-        const entry = memberStats[id];
-        return member ? { member, currentTotalPoints: entry?.totalPoints ?? 0 } : null;
-      })
-      .filter(Boolean)
-      .sort((a, b) => a.member.full_name.localeCompare(b.member.full_name));
-  }, [rotationResult, data.members, memberStats]);
+    if (!rotationResult && !mergedRotationData) return [];
+
+    if (rotationResult) {
+      return [...rotationResult.eligiblePlayerIds]
+        .map(id => {
+          const member = data.members.find(m => m.id === id);
+          const entry = memberStats[id];
+          return member ? { member, currentTotalPoints: entry?.totalPoints ?? 0 } : null;
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.member.full_name.localeCompare(b.member.full_name));
+    }
+
+    if (mergedRotationData) {
+      return [...mergedRotationData.perPlayerOwed.entries()]
+        .map(([id, owedEntry]) => {
+          const member = data.members.find(m => m.id === id);
+          const entry = memberStats[id];
+          return member ? { member, currentTotalPoints: entry?.totalPoints ?? 0, owedEntry } : null;
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.member.full_name.localeCompare(b.member.full_name));
+    }
+
+    return [];
+  }, [rotationResult, mergedRotationData, data.members, memberStats]);
 
   const upsetSections = useMemo(() => {
     if (!rotationResult?.upsets?.length) return [];
@@ -562,18 +626,22 @@ export default function GapFinderV2({ data, memberStats }) {
         </div>
       )}
 
-      {computable && selectedRotation && (
+      {(computable && selectedRotation) || mergedRotationData ? (
         <>
-          {status === 'grace' && (
+          {status === 'grace' && selectedRotation && (
             <div className="text-xs text-sky-300/80 bg-sky-500/10 border border-sky-500/20 rounded-lg px-3 py-2">
               ⏰ This rotation is still in its grace period — players may submit late check-ins until Sunday, so totals could shift slightly.
             </div>
           )}
-          {!rotationResult ? (
-            <div className="bg-gray-900 rounded-2xl p-10 text-center text-gray-600">
-              Featured team not found in data.
-            </div>
-            ) : (rotationResult.victories === 0 && upsetSections.length === 0) ? (
+
+          {/* Single-rotation view */}
+          {selectedRotationList.length === 1 && (
+            <>
+              {!rotationResult ? (
+                <div className="bg-gray-900 rounded-2xl p-10 text-center text-gray-600">
+                  Featured team not found in data.
+                </div>
+              ) : (rotationResult.victories === 0 && upsetSections.length === 0) ? (
             <div className="bg-gray-900 rounded-2xl p-10 text-center text-gray-600">
               <div className="text-4xl mb-3">🤷</div>
               <p>{rotationResult.featuredTeamName} neither won nor lost any matchups — no bonus to grant.</p>
@@ -740,6 +808,51 @@ export default function GapFinderV2({ data, memberStats }) {
                   ))}
                 </div>
               ))}
+            </>
+          )}
+
+          {/* Multi-rotation combined view */}
+          {selectedRotationList.length >= 2 && mergedRotationData && (
+            <>
+              {eligibleMembers.length === 0 ? (
+                <div className="bg-gray-900 rounded-2xl p-10 text-center text-gray-600">
+                  <div className="text-4xl mb-3">🤷</div>
+                  <p>No player is owed a bonus across the selected rotations.</p>
+                </div>
+              ) : (
+                <>
+                  <div className="bg-gray-900 rounded-2xl p-5 flex flex-wrap items-center gap-6">
+                    <div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Rotations</div>
+                      <div className="text-lg font-bold text-white">{selectedRotationList.map(r => r.label).join(' + ')}</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Eligible players</div>
+                      <div className="text-lg font-bold text-white">{eligibleMembers.length}</div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    {eligibleMembers.map(({ member, currentTotalPoints, owedEntry }) => {
+                      const rotationKey = selectedRotationList.map(r => r.num).join('+');
+                      return (
+                        <PlayerGapCard
+                          key={member.id}
+                          member={member}
+                          data={data}
+                          rotEntry={{
+                            rotation: { num: rotationKey },
+                            bonusPtsPerPlayer: owedEntry.total,
+                          }}
+                          capValue={capValue}
+                          currentTotalPoints={currentTotalPoints}
+                          completedRotations={completedRotations}
+                        />
+                      );
+                    })}
+                  </div>
+                </>
+              )}
             </>
           )}
         </>

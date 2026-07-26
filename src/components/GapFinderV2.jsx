@@ -569,7 +569,6 @@ export default function GapFinderV2({ data, memberStats }) {
               ⏰ This rotation is still in its grace period — players may submit late check-ins until Sunday, so totals could shift slightly.
             </div>
           )}
-        <>
           {!rotationResult ? (
             <div className="bg-gray-900 rounded-2xl p-10 text-center text-gray-600">
               Featured team not found in data.
@@ -742,7 +741,7 @@ export default function GapFinderV2({ data, memberStats }) {
                 </div>
               ))}
             </>
-            )}
+          )}
         </>
       )}
     </div>

@@ -135,7 +135,7 @@ export default function BonusReconciliation({ data }) {
   const [search, setSearch] = useState('');
 
   const completedRotations = useMemo(
-    () => ROTATIONS.filter(r => getRotationStatus(r) === 'closed').sort((a, b) => a.num - b.num),
+    () => ROTATIONS.filter(r => ['closed', 'grace'].includes(getRotationStatus(r))).sort((a, b) => a.num - b.num),
     []
   );
 
@@ -155,14 +155,19 @@ export default function BonusReconciliation({ data }) {
   );
 
   // playerId → { total, byRotation: Map<rotNum, amount> } from confirmed grants
+  // Handles both single-rotation grants (g.rotation = number) and combined grants (g.rotation = "7+8" string)
   const grantedByPlayer = useMemo(() => {
     const map = new Map();
     for (const g of grants) {
       const amt = g.grantAmount || 0;
+      const rotNums = String(g.rotation).split('+').map(Number).filter(n => !Number.isNaN(n));
       if (!map.has(g.playerId)) map.set(g.playerId, { total: 0, byRotation: new Map() });
       const entry = map.get(g.playerId);
       entry.total += amt;
-      entry.byRotation.set(g.rotation, (entry.byRotation.get(g.rotation) || 0) + amt);
+      const share = rotNums.length > 0 ? amt / rotNums.length : amt;
+      for (const num of rotNums) {
+        entry.byRotation.set(num, (entry.byRotation.get(num) || 0) + share);
+      }
     }
     return map;
   }, [grants]);

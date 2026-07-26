@@ -15,6 +15,7 @@ import ActivityTypes from './components/ActivityTypes';
 import TeamBuilder from './components/TeamBuilder';
 import Settings from './components/Settings';
 import GapFinder from './components/GapFinder';
+import GapFinderV2 from './components/GapFinderV2';
 import BonusReconciliation from './components/BonusReconciliation';
 import { useSettings } from './context/SettingsContext';
 import { processChallenge, getTeamStandings } from './utils/dataProcessor';
@@ -33,6 +34,7 @@ const VIEWS = [
   { key: 'activity_types', label: '🏷️ Activity Types' },
   { key: 'simulator', label: '🧪 Simulator' },
   { key: 'gap_finder', label: '🎁 Gap Finder' },
+  { key: 'gap_finder_v2', label: '🎁 Gap Finder v2' },
   { key: 'reconciliation', label: '🧾 Reconciliation' },
   { key: 'settings', label: '⚙️ Settings' },
 ];
@@ -251,6 +253,9 @@ export default function App() {
             )}
             {activeView === 'gap_finder' && (
               <GapFinder data={rawData} memberStats={memberStats} />
+            )}
+            {activeView === 'gap_finder_v2' && (
+              <GapFinderV2 data={rawData} memberStats={memberStats} />
             )}
             {activeView === 'reconciliation' && (
               <BonusReconciliation data={rawData} memberStats={memberStats} />

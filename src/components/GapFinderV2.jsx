@@ -626,7 +626,7 @@ export default function GapFinderV2({ data, memberStats }) {
         </div>
       )}
 
-      {(computable && selectedRotation) || mergedRotationData ? (
+      {((computable && selectedRotation) || mergedRotationData) && (
         <>
           {status === 'grace' && selectedRotation && (
             <div className="text-xs text-sky-300/80 bg-sky-500/10 border border-sky-500/20 rounded-lg px-3 py-2">
@@ -809,7 +809,9 @@ export default function GapFinderV2({ data, memberStats }) {
                 </div>
               ))}
             </>
-            )}
+              )}
+            </>
+          )}
 
           {/* Multi-rotation combined view */}
           {selectedRotationList.length >= 2 && mergedRotationData && (

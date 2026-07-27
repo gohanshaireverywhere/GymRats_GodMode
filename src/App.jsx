@@ -14,6 +14,7 @@ import Feed from './components/Feed';
 import ActivityTypes from './components/ActivityTypes';
 import TeamBuilder from './components/TeamBuilder';
 import Settings from './components/Settings';
+import FlaggedCheckIns from './components/FlaggedCheckIns';
 import GapFinder from './components/GapFinder';
 import GapFinderV2 from './components/GapFinderV2';
 import BonusReconciliation from './components/BonusReconciliation';
@@ -31,6 +32,7 @@ const VIEWS = [
   { key: 'player', label: '👤 Player' },
   { key: 'goals', label: '🎯 Goals' },
   { key: 'audit', label: '🔍 Audit' },
+  { key: 'flagged', label: '🚩 Flagged' },
   { key: 'activity_types', label: '🏷️ Activity Types' },
   { key: 'simulator', label: '🧪 Simulator' },
   { key: 'gap_finder', label: '🎁 Gap Finder' },
@@ -55,6 +57,7 @@ const RETURN_LABELS = {
   player: 'Player',
   goals: 'Goals',
   audit: 'Audit',
+  flagged: 'Flagged',
   activity_types: 'Activity Types',
   simulator: 'Simulator',
 };
@@ -245,6 +248,14 @@ export default function App() {
             )}
             {activeView === 'simulator' && (
               <Simulator
+                data={rawData}
+                memberMap={memberMap}
+                onPlayerClick={navigateToPlayer}
+                onActivityClick={navigateToActivity}
+              />
+            )}
+            {activeView === 'flagged' && (
+              <FlaggedCheckIns
                 data={rawData}
                 memberMap={memberMap}
                 onPlayerClick={navigateToPlayer}

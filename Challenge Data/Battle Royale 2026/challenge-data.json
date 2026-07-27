@@ -504,6 +504,14 @@
       "created_at": "2026-07-24T21:47:26.406990Z",
       "account_id": 3025172,
       "message_type": "text"
+    },
+    {
+      "id": 26319888,
+      "updated_at": "2026-07-26T17:35:55.486231Z",
+      "content": "ALL BATTLE ROYALE POINTS GRANTED ✅",
+      "created_at": "2026-07-26T17:35:55.486231Z",
+      "account_id": 3025172,
+      "message_type": "text"
     }
   ],
   "name": "Delivery Hero GymRats 3: Battle Royale",
@@ -1956,8 +1964,8 @@
       ]
     }
   ],
-  "photo_url": "https://cdn.gymrats.app/dedfc14f-83d8-4df6-bf0b-7fef4d0c29f7.jpg",
   "score_by": "points",
+  "photo_url": "https://cdn.gymrats.app/dedfc14f-83d8-4df6-bf0b-7fef4d0c29f7.jpg",
   "check_ins": [
     {
       "id": 622676910,
@@ -1975,8 +1983,8 @@
         "location_longitude": null
       },
       "duration": 26,
-      "updated_at": "2026-05-08T05:43:50.845330Z",
-      "points": 4.693452380952381,
+      "updated_at": "2026-07-26T17:30:55.265191Z",
+      "points": 24.11,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-07T22:49:37.689602Z",
       "calories": 297,
@@ -1993,6 +2001,14 @@
       "photo_url": "https://cdn.gymrats.app/eab28860-2eca-4bd7-a618-e8c786cf2ebe.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128816871,
+          "updated_at": "2026-07-26T17:30:57",
+          "created_at": "2026-07-26T17:30:57",
+          "account_id": 3025172,
+          "workout_id": 622676910,
+          "reaction": "🎁"
+        },
         {
           "id": 116690220,
           "updated_at": "2026-05-07T23:05:10",
@@ -2128,9 +2144,9 @@
         {
           "id": 569407679,
           "steps": null,
-          "start_time": "2026-05-07T22:07:31.000000Z",
-          "updated_at": "2026-05-07T22:49:37",
-          "points": 4.693452380952381,
+          "start_time": "2026-05-07T22:07:00.000000Z",
+          "updated_at": "2026-07-26T17:30:55",
+          "points": 24.11,
           "created_at": "2026-05-07T22:49:37",
           "calories": 297,
           "distance_miles": "0.27",
@@ -3791,8 +3807,8 @@
         "location_longitude": null
       },
       "duration": 10,
-      "updated_at": "2026-05-08T08:41:20.763136Z",
-      "points": 0.83190210048,
+      "updated_at": "2026-07-26T17:15:59.367894Z",
+      "points": 18.31,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-08T08:41:20.763136Z",
       "calories": 37,
@@ -3809,6 +3825,14 @@
       "photo_url": "https://cdn.gymrats.app/f1fe7aae-5ac1-478b-b2fc-efb1cae29ae5.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128815542,
+          "updated_at": "2026-07-26T17:16:04",
+          "created_at": "2026-07-26T17:16:04",
+          "account_id": 3025172,
+          "workout_id": 623166229,
+          "reaction": "🎁"
+        },
         {
           "id": 116784063,
           "updated_at": "2026-05-08T09:55:05",
@@ -3840,9 +3864,9 @@
         {
           "id": 569743061,
           "steps": null,
-          "start_time": "2026-05-08T07:26:07.000000Z",
-          "updated_at": "2026-05-08T08:41:20",
-          "points": 0.83190210048,
+          "start_time": "2026-05-08T07:26:00.000000Z",
+          "updated_at": "2026-07-26T17:15:59",
+          "points": 18.31,
           "created_at": "2026-05-08T08:41:20",
           "calories": 37,
           "distance_miles": "2.08",
@@ -4218,8 +4242,8 @@
         "location_longitude": "13.3947245"
       },
       "duration": 47,
-      "updated_at": "2026-05-08T10:08:54.024589Z",
-      "points": 6.962962962962963,
+      "updated_at": "2026-07-26T16:57:41.428043Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-08T10:08:54.024589Z",
       "calories": null,
@@ -4251,6 +4275,14 @@
           "account_id": 3024573,
           "workout_id": 623239514,
           "reaction": "❤️‍🔥"
+        },
+        {
+          "id": 128813769,
+          "updated_at": "2026-07-26T16:57:43",
+          "created_at": "2026-07-26T16:57:43",
+          "account_id": 3025172,
+          "workout_id": 623239514,
+          "reaction": "🎁"
         },
         {
           "id": 116790551,
@@ -4348,8 +4380,8 @@
           "id": 569789676,
           "steps": null,
           "start_time": "2026-05-08T09:10:00.000000Z",
-          "updated_at": "2026-05-08T10:08:54",
-          "points": 6.962962962962963,
+          "updated_at": "2026-07-26T16:57:41",
+          "points": 30,
           "created_at": "2026-05-08T10:08:54",
           "calories": null,
           "distance_miles": null,
@@ -11261,8 +11293,8 @@
         "location_longitude": null
       },
       "duration": 69,
-      "updated_at": "2026-05-09T11:56:39.036941Z",
-      "points": 4.03610600448,
+      "updated_at": "2026-07-26T17:05:51.014741Z",
+      "points": 16.01219485696,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-09T11:56:39.036941Z",
       "calories": 182,
@@ -11279,6 +11311,14 @@
       "photo_url": "https://cdn.gymrats.app/4270079b-6ad1-4354-869b-004993aefe61.jpg",
       "activity_count": 2,
       "reactions": [
+        {
+          "id": 128814582,
+          "updated_at": "2026-07-26T17:06:00",
+          "created_at": "2026-07-26T17:06:00",
+          "account_id": 3025172,
+          "workout_id": 624483841,
+          "reaction": "🎁"
+        },
         {
           "id": 117011062,
           "updated_at": "2026-05-09T14:39:23",
@@ -11390,9 +11430,9 @@
         {
           "id": 570619873,
           "steps": null,
-          "start_time": "2026-05-09T10:03:44.000000Z",
-          "updated_at": "2026-05-09T11:56:39",
-          "points": 2.37391114752,
+          "start_time": "2026-05-09T10:03:00.000000Z",
+          "updated_at": "2026-07-26T17:05:51",
+          "points": 14.35,
           "created_at": "2026-05-09T11:56:39",
           "calories": 112,
           "distance_miles": "5.93",
@@ -11405,7 +11445,7 @@
           "id": 570619874,
           "steps": null,
           "start_time": "2026-05-09T09:25:11.000000Z",
-          "updated_at": "2026-05-09T11:56:39",
+          "updated_at": "2026-07-26T17:05:51",
           "points": 1.66219485696,
           "created_at": "2026-05-09T11:56:39",
           "calories": 70,
@@ -15085,8 +15125,8 @@
         "location_longitude": null
       },
       "duration": 60,
-      "updated_at": "2026-05-09T21:40:37.152774Z",
-      "points": 12,
+      "updated_at": "2026-07-26T17:18:35.927849Z",
+      "points": 22.15,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-09T21:40:37.152774Z",
       "calories": 541,
@@ -15103,6 +15143,14 @@
       "photo_url": "https://cdn.gymrats.app/1907533f-4afa-469f-9315-4fb6ece1eacd.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128815858,
+          "updated_at": "2026-07-26T17:19:06",
+          "created_at": "2026-07-26T17:19:06",
+          "account_id": 3025172,
+          "workout_id": 625129732,
+          "reaction": "🎁"
+        },
         {
           "id": 117162094,
           "updated_at": "2026-05-10T20:28:34",
@@ -15126,9 +15174,9 @@
         {
           "id": 571057533,
           "steps": 5100,
-          "start_time": "2026-05-09T21:38:42.113000Z",
-          "updated_at": "2026-05-09T21:40:37",
-          "points": 12,
+          "start_time": "2026-05-09T21:38:00.000000Z",
+          "updated_at": "2026-07-26T17:18:35",
+          "points": 22.15,
           "created_at": "2026-05-09T21:40:37",
           "calories": 541,
           "distance_miles": "25.75",
@@ -23873,8 +23921,8 @@
         "location_longitude": null
       },
       "duration": 45,
-      "updated_at": "2026-05-11T06:51:47.081349Z",
-      "points": 6.923076923076923,
+      "updated_at": "2026-07-26T16:52:16.882370Z",
+      "points": 16.67,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-11T06:51:47.081349Z",
       "calories": null,
@@ -23891,6 +23939,14 @@
       "photo_url": "https://cdn.gymrats.app/3871fe30-47e6-4644-98bd-892ae037f8eb.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128813224,
+          "updated_at": "2026-07-26T16:52:19",
+          "created_at": "2026-07-26T16:52:19",
+          "account_id": 3025172,
+          "workout_id": 625892205,
+          "reaction": "🎁"
+        },
         {
           "id": 117204188,
           "updated_at": "2026-05-11T10:17:41",
@@ -23939,8 +23995,8 @@
           "id": 571633161,
           "steps": null,
           "start_time": "2026-05-11T06:00:00.000000Z",
-          "updated_at": "2026-05-11T06:51:47",
-          "points": 6.923076923076923,
+          "updated_at": "2026-07-26T16:52:16",
+          "points": 16.67,
           "created_at": "2026-05-11T06:51:47",
           "calories": null,
           "distance_miles": null,
@@ -24871,8 +24927,8 @@
         "location_longitude": null
       },
       "duration": 49,
-      "updated_at": "2026-05-11T08:58:00.418744Z",
-      "points": 9.333356531248835,
+      "updated_at": "2026-07-26T17:00:10.941967Z",
+      "points": 30,
       "timezone": "Europe/Lisbon",
       "created_at": "2026-05-11T08:58:00.418744Z",
       "calories": 378,
@@ -24889,6 +24945,14 @@
       "photo_url": "https://cdn.gymrats.app/f3b9c70e-dddc-405d-ab6b-05c2c4467eba.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128814017,
+          "updated_at": "2026-07-26T17:00:12",
+          "created_at": "2026-07-26T17:00:12",
+          "account_id": 3025172,
+          "workout_id": 625915166,
+          "reaction": "🎁"
+        },
         {
           "id": 117199320,
           "updated_at": "2026-05-11T09:20:40",
@@ -24960,9 +25024,9 @@
         {
           "id": 571646910,
           "steps": 7034,
-          "start_time": "2026-05-11T08:02:13.000000Z",
-          "updated_at": "2026-05-11T08:58:00",
-          "points": 9.333356531248835,
+          "start_time": "2026-05-11T08:02:00.000000Z",
+          "updated_at": "2026-07-26T17:00:10",
+          "points": 30,
           "created_at": "2026-05-11T08:58:00",
           "calories": 378,
           "distance_miles": "5.6",
@@ -28212,8 +28276,8 @@
         "location_longitude": null
       },
       "duration": 16,
-      "updated_at": "2026-05-11T19:23:05.561551Z",
-      "points": 2.965050595238095,
+      "updated_at": "2026-07-26T17:08:55.623394Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-11T19:20:04.547863Z",
       "calories": 204,
@@ -28230,6 +28294,14 @@
       "photo_url": "https://cdn.gymrats.app/517ee70a-dabb-497f-b6d0-5676a7d64718.jpg",
       "activity_count": 3,
       "reactions": [
+        {
+          "id": 128814873,
+          "updated_at": "2026-07-26T17:09:01",
+          "created_at": "2026-07-26T17:09:01",
+          "account_id": 3025172,
+          "workout_id": 626500500,
+          "reaction": "🎁"
+        },
         {
           "id": 117291536,
           "updated_at": "2026-05-11T21:16:01",
@@ -28277,9 +28349,9 @@
         {
           "id": 572045211,
           "steps": null,
-          "start_time": "2026-05-11T19:14:20.000000Z",
-          "updated_at": "2026-05-11T19:23:05",
-          "points": 0.5705505952380953,
+          "start_time": "2026-05-11T19:14:00.000000Z",
+          "updated_at": "2026-07-26T17:08:55",
+          "points": 30,
           "created_at": "2026-05-11T19:20:04",
           "calories": 39,
           "distance_miles": null,
@@ -28291,9 +28363,9 @@
         {
           "id": 572045212,
           "steps": null,
-          "start_time": "2026-05-11T19:03:49.000000Z",
-          "updated_at": "2026-05-11T19:20:04",
-          "points": 1.8156964285714285,
+          "start_time": "2026-05-11T19:03:00.000000Z",
+          "updated_at": "2026-07-26T17:08:55",
+          "points": 0,
           "created_at": "2026-05-11T19:20:04",
           "calories": 125,
           "distance_miles": null,
@@ -28305,9 +28377,9 @@
         {
           "id": 572045213,
           "steps": null,
-          "start_time": "2026-05-11T19:00:20.000000Z",
-          "updated_at": "2026-05-11T19:23:05",
-          "points": 0.5788035714285714,
+          "start_time": "2026-05-11T19:00:00.000000Z",
+          "updated_at": "2026-07-26T17:08:55",
+          "points": 0,
           "created_at": "2026-05-11T19:20:04",
           "calories": 40,
           "distance_miles": null,
@@ -28396,8 +28468,8 @@
         "location_longitude": null
       },
       "duration": 121,
-      "updated_at": "2026-07-24T13:42:16.566492Z",
-      "points": 12.697916666666668,
+      "updated_at": "2026-07-26T16:37:43.644831Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-11T19:42:42.830342Z",
       "calories": 1069,
@@ -28413,7 +28485,16 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/3d672fbf-3a77-41e9-81d5-c3c1ad80a734.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128811626,
+          "updated_at": "2026-07-26T16:37:45",
+          "created_at": "2026-07-26T16:37:45",
+          "account_id": 3025172,
+          "workout_id": 626523795,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
@@ -28421,8 +28502,8 @@
           "id": 572059039,
           "steps": 176,
           "start_time": "2026-05-11T17:32:00.000000Z",
-          "updated_at": "2026-07-24T13:42:16",
-          "points": 12.697916666666668,
+          "updated_at": "2026-07-26T16:37:43",
+          "points": 30,
           "created_at": "2026-05-11T19:42:42",
           "calories": 1069,
           "distance_miles": "0.04",
@@ -28466,12 +28547,12 @@
         "location_longitude": null
       },
       "duration": 66,
-      "updated_at": "2026-05-11T19:45:23.771868Z",
-      "points": 11.136111111111111,
+      "updated_at": "2026-07-26T17:34:12.784185Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-11T19:45:23.771868Z",
       "calories": 336,
-      "distance_miles": "1.02",
+      "distance_miles": "1.03",
       "duration_millis": 4009000,
       "occurred_at": "2026-05-11T17:01:20.000000Z",
       "activity_type": null,
@@ -28484,6 +28565,14 @@
       "photo_url": "https://cdn.gymrats.app/1047f3e8-126c-4a67-a246-787b7462fd7c.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128817124,
+          "updated_at": "2026-07-26T17:34:14",
+          "created_at": "2026-07-26T17:34:14",
+          "account_id": 3025172,
+          "workout_id": 626526469,
+          "reaction": "🎁"
+        },
         {
           "id": 117287241,
           "updated_at": "2026-05-11T20:56:39",
@@ -28571,12 +28660,12 @@
         {
           "id": 572060628,
           "steps": null,
-          "start_time": "2026-05-11T17:01:20.000000Z",
-          "updated_at": "2026-05-11T19:45:23",
-          "points": 11.136111111111111,
+          "start_time": "2026-05-11T17:01:00.000000Z",
+          "updated_at": "2026-07-26T17:34:12",
+          "points": 30,
           "created_at": "2026-05-11T19:45:23",
           "calories": 336,
-          "distance_miles": "1.02",
+          "distance_miles": "1.03",
           "duration_millis": 4009000,
           "workout_id": 626526469,
           "platform_activity": "swimming",
@@ -28823,8 +28912,8 @@
         "location_longitude": null
       },
       "duration": 43,
-      "updated_at": "2026-05-11T20:11:13.863428Z",
-      "points": 4.76584694784,
+      "updated_at": "2026-07-26T16:21:07.733075Z",
+      "points": 14.74,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-11T20:11:13.863428Z",
       "calories": 365,
@@ -28841,6 +28930,14 @@
       "photo_url": "https://cdn.gymrats.app/f5d4f2dd-1d46-46da-844f-842b22a97f56.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128809806,
+          "updated_at": "2026-07-26T16:21:10",
+          "created_at": "2026-07-26T16:21:10",
+          "account_id": 3025172,
+          "workout_id": 626558371,
+          "reaction": "🎁"
+        },
         {
           "id": 117284245,
           "updated_at": "2026-05-11T20:42:31",
@@ -28920,9 +29017,9 @@
         {
           "id": 572079496,
           "steps": null,
-          "start_time": "2026-05-11T15:53:53.000000Z",
-          "updated_at": "2026-05-11T20:11:13",
-          "points": 4.76584694784,
+          "start_time": "2026-05-11T15:53:00.000000Z",
+          "updated_at": "2026-07-26T16:21:07",
+          "points": 14.74,
           "created_at": "2026-05-11T20:11:13",
           "calories": 365,
           "distance_miles": "11.91",
@@ -29214,8 +29311,8 @@
         "location_longitude": null
       },
       "duration": 60,
-      "updated_at": "2026-05-19T10:19:06.166119Z",
-      "points": 3.466666666666667,
+      "updated_at": "2026-07-26T16:28:06.336550Z",
+      "points": 23.9,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-11T20:38:52.209919Z",
       "calories": 160,
@@ -29233,6 +29330,14 @@
       "activity_count": 1,
       "reactions": [
         {
+          "id": 128810629,
+          "updated_at": "2026-07-26T16:28:08",
+          "created_at": "2026-07-26T16:28:08",
+          "account_id": 3025172,
+          "workout_id": 626596256,
+          "reaction": "🎁"
+        },
+        {
           "id": 127805504,
           "updated_at": "2026-07-20T10:16:01",
           "created_at": "2026-07-20T10:16:01",
@@ -29248,8 +29353,8 @@
           "id": 572101286,
           "steps": 9000,
           "start_time": "2026-05-09T14:30:00.000000Z",
-          "updated_at": "2026-05-19T13:58:07",
-          "points": 3.466666666666667,
+          "updated_at": "2026-07-26T16:28:06",
+          "points": 23.9,
           "created_at": "2026-05-11T20:38:52",
           "calories": 160,
           "distance_miles": "5.2",
@@ -31094,8 +31199,8 @@
         "location_longitude": null
       },
       "duration": 11,
-      "updated_at": "2026-05-12T06:47:38.475293Z",
-      "points": 0.97210814976,
+      "updated_at": "2026-07-26T17:16:29.671207Z",
+      "points": 25.07,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-12T06:47:38.475293Z",
       "calories": 46,
@@ -31111,16 +31216,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/3347b639-09d5-42c6-95c7-d1fae32d6256.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128815600,
+          "updated_at": "2026-07-26T17:16:33",
+          "created_at": "2026-07-26T17:16:33",
+          "account_id": 3025172,
+          "workout_id": 627402026,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 572628933,
           "steps": null,
-          "start_time": "2026-05-12T06:19:49.000000Z",
-          "updated_at": "2026-05-12T06:47:38",
-          "points": 0.97210814976,
+          "start_time": "2026-05-12T06:19:00.000000Z",
+          "updated_at": "2026-07-26T17:16:29",
+          "points": 25.07,
           "created_at": "2026-05-12T06:47:38",
           "calories": 46,
           "distance_miles": "2.43",
@@ -31781,8 +31895,8 @@
         "location_longitude": null
       },
       "duration": 76,
-      "updated_at": "2026-05-12T07:23:40.096818Z",
-      "points": 13.683869047619048,
+      "updated_at": "2026-07-26T16:50:07.940382Z",
+      "points": 23.9,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-12T07:23:40.096818Z",
       "calories": 795,
@@ -31799,6 +31913,14 @@
       "photo_url": "https://cdn.gymrats.app/da985586-624e-4d4c-993e-5c00801a2b27.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128812963,
+          "updated_at": "2026-07-26T16:50:10",
+          "created_at": "2026-07-26T16:50:10",
+          "account_id": 3025172,
+          "workout_id": 627404310,
+          "reaction": "🎁"
+        },
         {
           "id": 117423445,
           "updated_at": "2026-05-12T09:23:04",
@@ -31838,9 +31960,9 @@
         {
           "id": 572630821,
           "steps": null,
-          "start_time": "2026-05-12T05:56:32.000000Z",
-          "updated_at": "2026-05-12T07:23:40",
-          "points": 13.683869047619048,
+          "start_time": "2026-05-12T05:56:00.000000Z",
+          "updated_at": "2026-07-26T16:50:07",
+          "points": 23.9,
           "created_at": "2026-05-12T07:23:40",
           "calories": 795,
           "distance_miles": "2.53",
@@ -31986,8 +32108,8 @@
         "location_longitude": null
       },
       "duration": 41,
-      "updated_at": "2026-05-12T08:28:16.784043Z",
-      "points": 11.825399999999998,
+      "updated_at": "2026-07-26T16:44:06.439301Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-12T08:28:16.784043Z",
       "calories": 419,
@@ -32004,6 +32126,14 @@
       "photo_url": "https://cdn.gymrats.app/fadde25d-29a0-43c5-bf6f-96d0063e70c6.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128812364,
+          "updated_at": "2026-07-26T16:44:08",
+          "created_at": "2026-07-26T16:44:08",
+          "account_id": 3025172,
+          "workout_id": 627413746,
+          "reaction": "🎁"
+        },
         {
           "id": 117512371,
           "updated_at": "2026-05-12T18:28:55",
@@ -32027,9 +32157,9 @@
         {
           "id": 572636522,
           "steps": 6562,
-          "start_time": "2026-05-12T07:30:04.000000Z",
-          "updated_at": "2026-05-12T08:28:16",
-          "points": 11.825399999999998,
+          "start_time": "2026-05-12T07:30:00.000000Z",
+          "updated_at": "2026-07-26T16:44:06",
+          "points": 30,
           "created_at": "2026-05-12T08:28:16",
           "calories": 419,
           "distance_miles": "7.1",
@@ -34750,8 +34880,8 @@
         "location_longitude": null
       },
       "duration": 14,
-      "updated_at": "2026-05-12T18:12:01.390585Z",
-      "points": 2.5650238095238094,
+      "updated_at": "2026-07-26T17:09:53.292169Z",
+      "points": 15.25,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-12T18:12:01.390585Z",
       "calories": 176,
@@ -34768,6 +34898,14 @@
       "photo_url": "https://cdn.gymrats.app/8ca506cf-6ff4-4252-9471-cde1453a04a9.jpg",
       "activity_count": 4,
       "reactions": [
+        {
+          "id": 128814984,
+          "updated_at": "2026-07-26T17:10:03",
+          "created_at": "2026-07-26T17:10:03",
+          "account_id": 3025172,
+          "workout_id": 628021575,
+          "reaction": "🎁"
+        },
         {
           "id": 117659963,
           "updated_at": "2026-05-13T04:48:43",
@@ -34823,9 +34961,9 @@
         {
           "id": 573050195,
           "steps": null,
-          "start_time": "2026-05-12T18:05:57.000000Z",
-          "updated_at": "2026-05-12T18:12:01",
-          "points": 0.5703750000000001,
+          "start_time": "2026-05-12T18:05:00.000000Z",
+          "updated_at": "2026-07-26T17:09:27",
+          "points": 15.25,
           "created_at": "2026-05-12T18:12:01",
           "calories": 39,
           "distance_miles": null,
@@ -34837,9 +34975,9 @@
         {
           "id": 573050196,
           "steps": null,
-          "start_time": "2026-05-12T17:57:47.000000Z",
-          "updated_at": "2026-05-12T18:12:01",
-          "points": 1.4094880952380953,
+          "start_time": "2026-05-12T17:57:00.000000Z",
+          "updated_at": "2026-07-26T17:09:53",
+          "points": 0,
           "created_at": "2026-05-12T18:12:01",
           "calories": 97,
           "distance_miles": null,
@@ -34851,9 +34989,9 @@
         {
           "id": 573050197,
           "steps": null,
-          "start_time": "2026-05-12T17:56:32.000000Z",
-          "updated_at": "2026-05-12T18:12:01",
-          "points": 0.16589583333333335,
+          "start_time": "2026-05-12T17:56:00.000000Z",
+          "updated_at": "2026-07-26T17:09:53",
+          "points": 0,
           "created_at": "2026-05-12T18:12:01",
           "calories": 11,
           "distance_miles": null,
@@ -34865,9 +35003,9 @@
         {
           "id": 573050198,
           "steps": null,
-          "start_time": "2026-05-12T17:53:53.000000Z",
-          "updated_at": "2026-05-12T18:12:01",
-          "points": 0.41926488095238096,
+          "start_time": "2026-05-12T17:53:00.000000Z",
+          "updated_at": "2026-07-26T17:09:53",
+          "points": 0,
           "created_at": "2026-05-12T18:12:01",
           "calories": 29,
           "distance_miles": null,
@@ -37617,8 +37755,8 @@
         "location_longitude": null
       },
       "duration": 57,
-      "updated_at": "2026-05-13T06:39:06.162533Z",
-      "points": 8.888892307692307,
+      "updated_at": "2026-07-26T17:15:01.209876Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-13T06:39:06.162533Z",
       "calories": 122,
@@ -37635,6 +37773,14 @@
       "photo_url": "https://cdn.gymrats.app/48e87bda-0cb8-4499-8be1-1b0f564c4351.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128815447,
+          "updated_at": "2026-07-26T17:15:03",
+          "created_at": "2026-07-26T17:15:03",
+          "account_id": 3025172,
+          "workout_id": 628964562,
+          "reaction": "🎁"
+        },
         {
           "id": 117792743,
           "updated_at": "2026-05-13T21:54:45",
@@ -37666,9 +37812,9 @@
         {
           "id": 573663571,
           "steps": null,
-          "start_time": "2026-05-13T05:33:08.000000Z",
-          "updated_at": "2026-05-13T06:39:06",
-          "points": 8.888892307692307,
+          "start_time": "2026-05-13T05:33:00.000000Z",
+          "updated_at": "2026-07-26T17:15:01",
+          "points": 30,
           "created_at": "2026-05-13T06:39:06",
           "calories": 122,
           "distance_miles": null,
@@ -37815,8 +37961,8 @@
         "location_longitude": null
       },
       "duration": 61,
-      "updated_at": "2026-05-13T07:49:01.823266Z",
-      "points": 10.239283333333333,
+      "updated_at": "2026-07-26T17:26:25.228104Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-13T07:49:01.823266Z",
       "calories": 390,
@@ -37840,6 +37986,14 @@
           "account_id": 3025172,
           "workout_id": 628968997,
           "reaction": "✨"
+        },
+        {
+          "id": 128816556,
+          "updated_at": "2026-07-26T17:27:04",
+          "created_at": "2026-07-26T17:27:04",
+          "account_id": 3025172,
+          "workout_id": 628968997,
+          "reaction": "🎁"
         },
         {
           "id": 117722698,
@@ -37872,9 +38026,9 @@
         {
           "id": 573667071,
           "steps": 8810,
-          "start_time": "2026-05-12T16:13:20.000000Z",
-          "updated_at": "2026-05-13T07:49:01",
-          "points": 10.239283333333333,
+          "start_time": "2026-05-12T16:13:00.000000Z",
+          "updated_at": "2026-07-26T17:26:25",
+          "points": 30,
           "created_at": "2026-05-13T07:49:01",
           "calories": 390,
           "distance_miles": "6.14",
@@ -40636,8 +40790,8 @@
         "location_longitude": null
       },
       "duration": 90,
-      "updated_at": "2026-05-13T15:20:06.462602Z",
-      "points": 13.333333333333334,
+      "updated_at": "2026-07-26T17:20:34.714067Z",
+      "points": 23.9,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-13T15:20:06.462602Z",
       "calories": null,
@@ -40654,6 +40808,14 @@
       "photo_url": "https://cdn.gymrats.app/d1205187-8bb9-400b-8841-9ecd533b06bb.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128815999,
+          "updated_at": "2026-07-26T17:20:39",
+          "created_at": "2026-07-26T17:20:39",
+          "account_id": 3025172,
+          "workout_id": 629407536,
+          "reaction": "🎁"
+        },
         {
           "id": 117980941,
           "updated_at": "2026-05-14T18:21:18",
@@ -40694,8 +40856,8 @@
           "id": 573963586,
           "steps": null,
           "start_time": "2026-05-12T06:01:00.000000Z",
-          "updated_at": "2026-05-13T15:20:06",
-          "points": 13.333333333333334,
+          "updated_at": "2026-07-26T17:20:34",
+          "points": 23.9,
           "created_at": "2026-05-13T15:20:06",
           "calories": null,
           "distance_miles": null,
@@ -42012,8 +42174,8 @@
         "location_longitude": null
       },
       "duration": 50,
-      "updated_at": "2026-05-13T18:52:31.353805Z",
-      "points": 8.542358333333333,
+      "updated_at": "2026-07-26T16:42:12.184944Z",
+      "points": 25.94,
       "timezone": "+02:00",
       "created_at": "2026-05-13T18:52:31.353805Z",
       "calories": 396,
@@ -42030,6 +42192,14 @@
       "photo_url": "https://cdn.gymrats.app/d87f75d7-53e6-4331-8bae-23f7dda9b704.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128812174,
+          "updated_at": "2026-07-26T16:42:14",
+          "created_at": "2026-07-26T16:42:14",
+          "account_id": 3025172,
+          "workout_id": 629594239,
+          "reaction": "🎁"
+        },
         {
           "id": 117791326,
           "updated_at": "2026-05-13T21:49:27",
@@ -42069,9 +42239,9 @@
         {
           "id": 574086690,
           "steps": null,
-          "start_time": "2026-05-13T17:12:03.520000Z",
-          "updated_at": "2026-05-13T18:52:31",
-          "points": 8.542358333333333,
+          "start_time": "2026-05-13T17:12:00.000000Z",
+          "updated_at": "2026-07-26T16:42:12",
+          "points": 25.94,
           "created_at": "2026-05-13T18:52:31",
           "calories": 396,
           "distance_miles": "5.13",
@@ -45015,8 +45185,8 @@
         "location_longitude": null
       },
       "duration": 50,
-      "updated_at": "2026-05-14T07:22:24.298259Z",
-      "points": 8.961309523809524,
+      "updated_at": "2026-07-26T16:48:09.113151Z",
+      "points": 28.91,
       "timezone": "+02:00",
       "created_at": "2026-05-14T07:22:24.298259Z",
       "calories": 220,
@@ -45033,6 +45203,14 @@
       "photo_url": "https://cdn.gymrats.app/7aac8d95-07c8-432f-84bf-55f46a4f479c.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128812764,
+          "updated_at": "2026-07-26T16:48:11",
+          "created_at": "2026-07-26T16:48:11",
+          "account_id": 3025172,
+          "workout_id": 630451670,
+          "reaction": "🎁"
+        },
         {
           "id": 117949549,
           "updated_at": "2026-05-14T14:24:46",
@@ -45072,9 +45250,9 @@
         {
           "id": 574639828,
           "steps": 8,
-          "start_time": "2026-05-14T06:01:52.000000Z",
-          "updated_at": "2026-05-14T07:22:24",
-          "points": 8.961309523809524,
+          "start_time": "2026-05-14T06:01:00.000000Z",
+          "updated_at": "2026-07-26T16:48:09",
+          "points": 28.91,
           "created_at": "2026-05-14T07:22:24",
           "calories": 220,
           "distance_miles": null,
@@ -49742,8 +49920,8 @@
         "location_longitude": null
       },
       "duration": 55,
-      "updated_at": "2026-05-14T16:28:42.865472Z",
-      "points": 15.013683333333333,
+      "updated_at": "2026-07-26T16:44:48.721093Z",
+      "points": 18.75,
       "timezone": "+02:00",
       "created_at": "2026-05-14T16:28:42.865472Z",
       "calories": 559,
@@ -49760,6 +49938,14 @@
       "photo_url": "https://cdn.gymrats.app/592b00b5-33ae-470a-8f55-be1e4de7c69c.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128812433,
+          "updated_at": "2026-07-26T16:45:00",
+          "created_at": "2026-07-26T16:45:00",
+          "account_id": 3025172,
+          "workout_id": 630944882,
+          "reaction": "🎁"
+        },
         {
           "id": 117977436,
           "updated_at": "2026-05-14T17:49:00",
@@ -49791,9 +49977,9 @@
         {
           "id": 574972715,
           "steps": 8528,
-          "start_time": "2026-05-14T15:23:19.000000Z",
-          "updated_at": "2026-05-14T16:28:42",
-          "points": 15.013683333333333,
+          "start_time": "2026-05-14T15:23:00.000000Z",
+          "updated_at": "2026-07-26T16:44:48",
+          "points": 18.75,
           "created_at": "2026-05-14T16:28:42",
           "calories": 559,
           "distance_miles": "9.01",
@@ -50360,8 +50546,8 @@
         "location_longitude": null
       },
       "duration": 50,
-      "updated_at": "2026-05-14T17:33:16.543103Z",
-      "points": 8.928571428571429,
+      "updated_at": "2026-07-26T17:20:01.027649Z",
+      "points": 18.93,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-14T17:32:45.990985Z",
       "calories": null,
@@ -50378,6 +50564,14 @@
       "photo_url": "https://cdn.gymrats.app/45722a67-f6f1-4466-96d9-a5f2f7eeb7e6.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128815930,
+          "updated_at": "2026-07-26T17:20:03",
+          "created_at": "2026-07-26T17:20:03",
+          "account_id": 3025172,
+          "workout_id": 630994415,
+          "reaction": "🎁"
+        },
         {
           "id": 117977339,
           "updated_at": "2026-05-14T17:48:17",
@@ -50522,8 +50716,8 @@
           "id": 575006754,
           "steps": null,
           "start_time": "2026-05-14T16:30:00.000000Z",
-          "updated_at": "2026-05-14T17:32:45",
-          "points": 8.928571428571429,
+          "updated_at": "2026-07-26T17:20:01",
+          "points": 18.93,
           "created_at": "2026-05-14T17:32:45",
           "calories": null,
           "distance_miles": null,
@@ -52472,8 +52666,8 @@
         "location_longitude": null
       },
       "duration": null,
-      "updated_at": "2026-05-14T19:57:13.546445Z",
-      "points": 6.666666666666667,
+      "updated_at": "2026-07-26T17:25:42.422794Z",
+      "points": 26.67,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-14T19:56:13.363574Z",
       "calories": null,
@@ -52490,6 +52684,14 @@
       "photo_url": "https://cdn.gymrats.app/3f21319a-c3d7-4633-a971-edc1e8a0f62e.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128816449,
+          "updated_at": "2026-07-26T17:25:44",
+          "created_at": "2026-07-26T17:25:44",
+          "account_id": 3025172,
+          "workout_id": 631111628,
+          "reaction": "🎁"
+        },
         {
           "id": 118005992,
           "updated_at": "2026-05-14T21:11:11",
@@ -52602,8 +52804,8 @@
           "id": 575077571,
           "steps": null,
           "start_time": "2026-05-14T07:30:00.000000Z",
-          "updated_at": "2026-05-19T13:58:07",
-          "points": 6.666666666666667,
+          "updated_at": "2026-07-26T17:25:42",
+          "points": 26.67,
           "created_at": "2026-05-14T19:56:13",
           "calories": null,
           "distance_miles": "10",
@@ -55940,8 +56142,8 @@
         "location_longitude": null
       },
       "duration": 60,
-      "updated_at": "2026-05-15T11:45:37.515042Z",
-      "points": 10.714285714285715,
+      "updated_at": "2026-07-26T16:13:12.791955Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-15T11:45:37.515042Z",
       "calories": null,
@@ -55959,6 +56161,14 @@
       "activity_count": 1,
       "reactions": [
         {
+          "id": 128808672,
+          "updated_at": "2026-07-26T16:13:14",
+          "created_at": "2026-07-26T16:13:14",
+          "account_id": 3025172,
+          "workout_id": 632065277,
+          "reaction": "🎁"
+        },
+        {
           "id": 118298783,
           "updated_at": "2026-05-16T12:25:55",
           "created_at": "2026-05-16T12:25:55",
@@ -55974,8 +56184,8 @@
           "id": 575700369,
           "steps": null,
           "start_time": "2026-05-15T11:42:00.000000Z",
-          "updated_at": "2026-05-15T11:45:37",
-          "points": 10.714285714285715,
+          "updated_at": "2026-07-26T16:13:12",
+          "points": 30,
           "created_at": "2026-05-15T11:45:37",
           "calories": null,
           "distance_miles": null,
@@ -56827,8 +57037,8 @@
         "location_longitude": null
       },
       "duration": 10,
-      "updated_at": "2026-05-19T10:33:07.715484Z",
-      "points": 2.666666666666667,
+      "updated_at": "2026-07-26T16:27:23.023846Z",
+      "points": 12.86,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-15T15:19:52.493792Z",
       "calories": null,
@@ -56845,6 +57055,14 @@
       "photo_url": "https://cdn.gymrats.app/2cef1efe-3a9b-4e17-a50b-1dc053c3dbe9.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128810550,
+          "updated_at": "2026-07-26T16:27:25",
+          "created_at": "2026-07-26T16:27:25",
+          "account_id": 3025172,
+          "workout_id": 632260481,
+          "reaction": "🎁"
+        },
         {
           "id": 118198683,
           "updated_at": "2026-05-15T19:52:45",
@@ -56877,8 +57095,8 @@
           "id": 575835408,
           "steps": 1752,
           "start_time": "2026-05-15T15:19:00.000000Z",
-          "updated_at": "2026-05-19T10:33:07",
-          "points": 2.666666666666667,
+          "updated_at": "2026-07-26T16:27:23",
+          "points": 12.86,
           "created_at": "2026-05-15T15:22:11",
           "calories": null,
           "distance_miles": "1.6",
@@ -57811,8 +58029,8 @@
         "location_longitude": null
       },
       "duration": 44,
-      "updated_at": "2026-05-15T17:13:12.826835Z",
-      "points": 6.604938271604938,
+      "updated_at": "2026-07-26T16:31:43.226090Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-15T17:13:12.826835Z",
       "calories": 228,
@@ -57829,6 +58047,14 @@
       "photo_url": "https://cdn.gymrats.app/1bc23547-df30-48ff-b7dd-9f7e9b253654.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128810984,
+          "updated_at": "2026-07-26T16:31:45",
+          "created_at": "2026-07-26T16:31:45",
+          "account_id": 3025172,
+          "workout_id": 632358810,
+          "reaction": "🎁"
+        },
         {
           "id": 118190169,
           "updated_at": "2026-05-15T18:35:33",
@@ -57932,9 +58158,9 @@
         {
           "id": 575900832,
           "steps": 46,
-          "start_time": "2026-05-15T16:15:33.000000Z",
-          "updated_at": "2026-05-15T17:13:12",
-          "points": 6.604938271604938,
+          "start_time": "2026-05-15T16:15:00.000000Z",
+          "updated_at": "2026-07-26T16:31:43",
+          "points": 30,
           "created_at": "2026-05-15T17:13:12",
           "calories": 228,
           "distance_miles": null,
@@ -58010,8 +58236,8 @@
         "location_longitude": null
       },
       "duration": 36,
-      "updated_at": "2026-05-15T17:27:34.351278Z",
-      "points": 8.101974144,
+      "updated_at": "2026-07-26T17:23:03.608891Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-15T17:27:34.351278Z",
       "calories": 238,
@@ -58028,6 +58254,14 @@
       "photo_url": "https://cdn.gymrats.app/545876d9-36b9-4878-b768-1faf9bba94c3.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128816238,
+          "updated_at": "2026-07-26T17:23:14",
+          "created_at": "2026-07-26T17:23:14",
+          "account_id": 3025172,
+          "workout_id": 632368583,
+          "reaction": "🎁"
+        },
         {
           "id": 118199810,
           "updated_at": "2026-05-15T20:01:52",
@@ -58067,9 +58301,9 @@
         {
           "id": 575907592,
           "steps": null,
-          "start_time": "2026-05-15T10:39:22.000000Z",
-          "updated_at": "2026-05-15T17:27:34",
-          "points": 8.101974144,
+          "start_time": "2026-05-15T10:39:00.000000Z",
+          "updated_at": "2026-07-26T17:23:03",
+          "points": 30,
           "created_at": "2026-05-15T17:27:34",
           "calories": 238,
           "distance_miles": "4.86",
@@ -59406,8 +59640,8 @@
         "location_longitude": null
       },
       "duration": 60,
-      "updated_at": "2026-05-15T19:36:43.798667Z",
-      "points": 9.23076923076923,
+      "updated_at": "2026-07-26T16:26:27.314666Z",
+      "points": 29.2,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-15T19:36:43.798667Z",
       "calories": null,
@@ -59424,6 +59658,14 @@
       "photo_url": "https://cdn.gymrats.app/401dbc26-40f4-4cb4-acbd-2fcda1a68d61.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128810453,
+          "updated_at": "2026-07-26T16:26:29",
+          "created_at": "2026-07-26T16:26:29",
+          "account_id": 3025172,
+          "workout_id": 632462737,
+          "reaction": "🎁"
+        },
         {
           "id": 118281694,
           "updated_at": "2026-05-16T07:11:00",
@@ -59456,8 +59698,8 @@
           "id": 575967356,
           "steps": null,
           "start_time": "2026-05-15T19:36:00.000000Z",
-          "updated_at": "2026-05-15T19:36:43",
-          "points": 9.23076923076923,
+          "updated_at": "2026-07-26T16:26:27",
+          "points": 29.2,
           "created_at": "2026-05-15T19:36:43",
           "calories": null,
           "distance_miles": null,
@@ -60333,8 +60575,8 @@
         "location_longitude": null
       },
       "duration": 50,
-      "updated_at": "2026-05-16T00:00:11.817376Z",
-      "points": 7.6923076923076925,
+      "updated_at": "2026-07-26T17:30:15.725434Z",
+      "points": 27.66,
       "timezone": "Asia/Kolkata",
       "created_at": "2026-05-16T00:00:11.817376Z",
       "calories": null,
@@ -60352,6 +60594,14 @@
       "activity_count": 1,
       "reactions": [
         {
+          "id": 128816820,
+          "updated_at": "2026-07-26T17:30:17",
+          "created_at": "2026-07-26T17:30:17",
+          "account_id": 3025172,
+          "workout_id": 632853880,
+          "reaction": "🎁"
+        },
+        {
           "id": 118298711,
           "updated_at": "2026-05-16T12:25:23",
           "created_at": "2026-05-16T12:25:23",
@@ -60367,8 +60617,8 @@
           "id": 576206795,
           "steps": null,
           "start_time": "2026-05-15T12:25:00.000000Z",
-          "updated_at": "2026-05-16T00:00:11",
-          "points": 7.6923076923076925,
+          "updated_at": "2026-07-26T17:30:15",
+          "points": 27.66,
           "created_at": "2026-05-16T00:00:11",
           "calories": null,
           "distance_miles": null,
@@ -62621,8 +62871,8 @@
         "location_longitude": null
       },
       "duration": 45,
-      "updated_at": "2026-05-16T11:13:25.295497Z",
-      "points": 8.035714285714286,
+      "updated_at": "2026-07-26T16:12:32.998060Z",
+      "points": 18.04,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-16T11:13:25.295497Z",
       "calories": 663,
@@ -62639,6 +62889,14 @@
       "photo_url": "https://cdn.gymrats.app/6d278d3c-7cca-4fae-9d83-45f6a71f6fbd.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128808578,
+          "updated_at": "2026-07-26T16:12:35",
+          "created_at": "2026-07-26T16:12:35",
+          "account_id": 3025172,
+          "workout_id": 633104470,
+          "reaction": "🎁"
+        },
         {
           "id": 118298237,
           "updated_at": "2026-05-16T12:22:01",
@@ -62679,8 +62937,8 @@
           "id": 576390707,
           "steps": null,
           "start_time": "2026-05-16T10:00:00.000000Z",
-          "updated_at": "2026-05-16T11:13:25",
-          "points": 8.035714285714286,
+          "updated_at": "2026-07-26T16:12:33",
+          "points": 18.04,
           "created_at": "2026-05-16T11:13:25",
           "calories": 663,
           "distance_miles": null,
@@ -63032,8 +63290,8 @@
         "location_longitude": null
       },
       "duration": 120,
-      "updated_at": "2026-05-16T11:37:13.105065Z",
-      "points": 5.999999999999999,
+      "updated_at": "2026-07-26T17:01:25.705126Z",
+      "points": 16.57,
       "timezone": "Asia/Shanghai",
       "created_at": "2026-05-16T11:37:13.105065Z",
       "calories": null,
@@ -63050,6 +63308,14 @@
       "photo_url": "https://cdn.gymrats.app/be10e398-5dd9-4452-a2fe-bf324adc6d90.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128814162,
+          "updated_at": "2026-07-26T17:01:28",
+          "created_at": "2026-07-26T17:01:28",
+          "account_id": 3025172,
+          "workout_id": 633121655,
+          "reaction": "🎁"
+        },
         {
           "id": 118298153,
           "updated_at": "2026-05-16T12:21:23",
@@ -63074,8 +63340,8 @@
           "id": 576402601,
           "steps": 12686,
           "start_time": "2026-05-16T11:34:00.000000Z",
-          "updated_at": "2026-05-19T13:58:07",
-          "points": 5.999999999999999,
+          "updated_at": "2026-07-26T17:01:25",
+          "points": 16.57,
           "created_at": "2026-05-16T11:37:13",
           "calories": null,
           "distance_miles": "9",
@@ -64525,8 +64791,8 @@
         "location_longitude": null
       },
       "duration": 120,
-      "updated_at": "2026-05-16T14:30:48.914702Z",
-      "points": 10,
+      "updated_at": "2026-07-26T16:39:49.007364Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-16T14:30:48.914702Z",
       "calories": null,
@@ -64543,6 +64809,14 @@
       "photo_url": "https://cdn.gymrats.app/65325bd7-f5fd-43bc-94c1-5d368fcaa0d8.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128811901,
+          "updated_at": "2026-07-26T16:39:51",
+          "created_at": "2026-07-26T16:39:51",
+          "account_id": 3025172,
+          "workout_id": 633348634,
+          "reaction": "🎁"
+        },
         {
           "id": 118376478,
           "updated_at": "2026-05-16T20:29:50",
@@ -64591,8 +64865,8 @@
           "id": 576552220,
           "steps": null,
           "start_time": "2026-05-16T11:30:00.000000Z",
-          "updated_at": "2026-05-16T14:30:48",
-          "points": 10,
+          "updated_at": "2026-07-26T16:39:49",
+          "points": 30,
           "created_at": "2026-05-16T14:30:48",
           "calories": null,
           "distance_miles": null,
@@ -68649,8 +68923,8 @@
         "location_longitude": null
       },
       "duration": 77,
-      "updated_at": "2026-05-17T04:55:35.696477Z",
-      "points": 8.046875,
+      "updated_at": "2026-07-26T17:05:10.555475Z",
+      "points": 28.74,
       "timezone": "+02:00",
       "created_at": "2026-05-17T04:55:35.696477Z",
       "calories": 609,
@@ -68667,6 +68941,14 @@
       "photo_url": "https://cdn.gymrats.app/6ca52f47-2979-4691-8b40-fc164bf09218.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128814492,
+          "updated_at": "2026-07-26T17:05:12",
+          "created_at": "2026-07-26T17:05:12",
+          "account_id": 3025172,
+          "workout_id": 633975979,
+          "reaction": "🎁"
+        },
         {
           "id": 118417945,
           "updated_at": "2026-05-17T06:53:44",
@@ -68690,9 +68972,9 @@
         {
           "id": 576996166,
           "steps": 2978,
-          "start_time": "2026-05-16T11:00:53.000000Z",
-          "updated_at": "2026-05-17T04:55:35",
-          "points": 8.046875,
+          "start_time": "2026-05-16T11:00:00.000000Z",
+          "updated_at": "2026-07-26T17:05:10",
+          "points": 28.74,
           "created_at": "2026-05-17T04:55:35",
           "calories": 609,
           "distance_miles": "0.26",
@@ -75109,8 +75391,8 @@
         "location_longitude": null
       },
       "duration": 20,
-      "updated_at": "2026-05-18T05:47:23.568923Z",
-      "points": 3.6363636363636362,
+      "updated_at": "2026-07-26T16:18:11.295783Z",
+      "points": 23.9,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-18T05:47:23.568923Z",
       "calories": null,
@@ -75127,6 +75409,14 @@
       "photo_url": "https://cdn.gymrats.app/36461360-50ee-44f0-b5e0-11dc835112e4.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128809434,
+          "updated_at": "2026-07-26T16:18:13",
+          "created_at": "2026-07-26T16:18:13",
+          "account_id": 3025172,
+          "workout_id": 634689628,
+          "reaction": "🎁"
+        },
         {
           "id": 118522062,
           "updated_at": "2026-05-18T06:26:26",
@@ -75206,9 +75496,9 @@
         {
           "id": 577528048,
           "steps": null,
-          "start_time": "2026-05-18T05:46:59.134702Z",
-          "updated_at": "2026-05-18T05:47:23",
-          "points": 3.6363636363636362,
+          "start_time": "2026-05-18T05:46:00.000000Z",
+          "updated_at": "2026-07-26T16:18:11",
+          "points": 23.9,
           "created_at": "2026-05-18T05:47:23",
           "calories": null,
           "distance_miles": null,
@@ -77108,8 +77398,8 @@
         "location_longitude": "13.3939325"
       },
       "duration": 44,
-      "updated_at": "2026-05-18T10:15:16.990696Z",
-      "points": 6.518518518518518,
+      "updated_at": "2026-07-26T16:58:07.654145Z",
+      "points": 23.9,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-18T10:15:16.990696Z",
       "calories": null,
@@ -77126,6 +77416,14 @@
       "photo_url": "https://cdn.gymrats.app/cca1c01d-7796-4ee5-ba7d-eba83d84da1b.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128813818,
+          "updated_at": "2026-07-26T16:58:10",
+          "created_at": "2026-07-26T16:58:10",
+          "account_id": 3025172,
+          "workout_id": 634794534,
+          "reaction": "🎁"
+        },
         {
           "id": 118602409,
           "updated_at": "2026-05-18T19:26:35",
@@ -77190,8 +77488,8 @@
           "id": 577595825,
           "steps": null,
           "start_time": "2026-05-18T09:18:00.000000Z",
-          "updated_at": "2026-05-18T10:15:16",
-          "points": 6.518518518518518,
+          "updated_at": "2026-07-26T16:58:07",
+          "points": 23.9,
           "created_at": "2026-05-18T10:15:16",
           "calories": null,
           "distance_miles": null,
@@ -82027,8 +82325,8 @@
         "location_longitude": null
       },
       "duration": 180,
-      "updated_at": "2026-05-18T20:37:04.059801Z",
-      "points": 5.333333333333333,
+      "updated_at": "2026-07-26T17:08:00.635376Z",
+      "points": 25.07,
       "timezone": "Atlantic/Azores",
       "created_at": "2026-05-18T20:37:04.059801Z",
       "calories": null,
@@ -82045,6 +82343,14 @@
       "photo_url": "https://cdn.gymrats.app/fc71c403-bd15-49ca-846f-8e2f54af4897.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128814782,
+          "updated_at": "2026-07-26T17:08:02",
+          "created_at": "2026-07-26T17:08:02",
+          "account_id": 3025172,
+          "workout_id": 635403047,
+          "reaction": "🎁"
+        },
         {
           "id": 118812301,
           "updated_at": "2026-05-19T15:51:51",
@@ -82084,9 +82390,9 @@
         {
           "id": 578001065,
           "steps": null,
-          "start_time": "2026-05-18T20:36:33.672791Z",
-          "updated_at": "2026-05-19T13:58:07",
-          "points": 5.333333333333333,
+          "start_time": "2026-05-18T20:36:00.000000Z",
+          "updated_at": "2026-07-26T17:08:00",
+          "points": 25.07,
           "created_at": "2026-05-18T20:37:04",
           "calories": null,
           "distance_miles": "8",
@@ -83419,8 +83725,8 @@
         "location_longitude": null
       },
       "duration": 47,
-      "updated_at": "2026-05-18T22:19:34.063455Z",
-      "points": 7.377820666666667,
+      "updated_at": "2026-07-26T16:42:30.612386Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-18T22:19:34.063455Z",
       "calories": 380,
@@ -83436,16 +83742,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/80ea642c-8796-472e-bc58-17a07c0187e0.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128812198,
+          "updated_at": "2026-07-26T16:42:32",
+          "created_at": "2026-07-26T16:42:32",
+          "account_id": 3025172,
+          "workout_id": 635596468,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 578113441,
           "steps": null,
-          "start_time": "2026-05-18T17:24:13.505000Z",
-          "updated_at": "2026-05-18T22:19:34",
-          "points": 7.377820666666667,
+          "start_time": "2026-05-18T17:24:00.000000Z",
+          "updated_at": "2026-07-26T16:42:30",
+          "points": 30,
           "created_at": "2026-05-18T22:19:34",
           "calories": 380,
           "distance_miles": "4.43",
@@ -83559,8 +83874,8 @@
         "location_longitude": null
       },
       "duration": 35,
-      "updated_at": "2026-05-19T05:03:14.550457Z",
-      "points": 8.342333333333332,
+      "updated_at": "2026-07-26T16:53:37.618063Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-19T05:03:14.550457Z",
       "calories": 328,
@@ -83576,16 +83891,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/c3ce1f87-8e8f-441a-8842-cdf1b1d21ecc.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128813381,
+          "updated_at": "2026-07-26T16:53:40",
+          "created_at": "2026-07-26T16:53:40",
+          "account_id": 3025172,
+          "workout_id": 636178223,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 578503955,
           "steps": 5824,
-          "start_time": "2026-05-17T17:16:21.000000Z",
-          "updated_at": "2026-05-19T05:03:14",
-          "points": 8.342333333333332,
+          "start_time": "2026-05-17T17:16:00.000000Z",
+          "updated_at": "2026-07-26T16:53:37",
+          "points": 30,
           "created_at": "2026-05-19T05:03:14",
           "calories": 328,
           "distance_miles": "5.01",
@@ -84521,8 +84845,8 @@
         "location_longitude": null
       },
       "duration": 30,
-      "updated_at": "2026-05-19T07:04:20.447032Z",
-      "points": 5.502783333333334,
+      "updated_at": "2026-07-26T17:28:16.191024Z",
+      "points": 20.67,
       "timezone": "+02:00",
       "created_at": "2026-05-19T07:04:20.447032Z",
       "calories": 284,
@@ -84546,6 +84870,14 @@
           "account_id": 3025172,
           "workout_id": 636184379,
           "reaction": "✨"
+        },
+        {
+          "id": 128816643,
+          "updated_at": "2026-07-26T17:28:18",
+          "created_at": "2026-07-26T17:28:18",
+          "account_id": 3025172,
+          "workout_id": 636184379,
+          "reaction": "🎁"
         },
         {
           "id": 118796061,
@@ -84666,9 +84998,9 @@
         {
           "id": 578508923,
           "steps": 4594,
-          "start_time": "2026-05-19T05:50:41.000000Z",
-          "updated_at": "2026-05-19T07:04:20",
-          "points": 5.502783333333334,
+          "start_time": "2026-05-19T05:50:00.000000Z",
+          "updated_at": "2026-07-26T17:28:16",
+          "points": 20.67,
           "created_at": "2026-05-19T07:04:20",
           "calories": 284,
           "distance_miles": "3.3",
@@ -84902,8 +85234,8 @@
         "location_longitude": null
       },
       "duration": 46,
-      "updated_at": "2026-05-19T07:42:10.713206Z",
-      "points": 3.6696319999999996,
+      "updated_at": "2026-07-26T16:30:00.204339Z",
+      "points": 23.9,
       "timezone": "+02:00",
       "created_at": "2026-05-19T07:42:10.713206Z",
       "calories": 227,
@@ -84935,9 +85267,9 @@
         {
           "id": 578510747,
           "steps": null,
-          "start_time": "2026-05-19T06:23:39.000000Z",
-          "updated_at": "2026-05-19T07:42:10",
-          "points": 3.6696319999999996,
+          "start_time": "2026-05-19T06:23:00.000000Z",
+          "updated_at": "2026-07-26T16:30:00",
+          "points": 23.9,
           "created_at": "2026-05-19T07:42:10",
           "calories": 227,
           "distance_miles": "9.17",
@@ -85526,8 +85858,8 @@
         "location_longitude": null
       },
       "duration": 20,
-      "updated_at": "2026-05-19T14:22:27.258052Z",
-      "points": 3.076923076923077,
+      "updated_at": "2026-07-26T16:58:49.644586Z",
+      "points": 23.9,
       "timezone": "+02:00",
       "created_at": "2026-05-19T14:22:27.258052Z",
       "calories": 30,
@@ -85544,6 +85876,14 @@
       "photo_url": "https://cdn.gymrats.app/2e016679-0b61-46f4-8dad-9accd925a81d.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128813883,
+          "updated_at": "2026-07-26T16:58:51",
+          "created_at": "2026-07-26T16:58:51",
+          "account_id": 3025172,
+          "workout_id": 636590426,
+          "reaction": "🎁"
+        },
         {
           "id": 118977693,
           "updated_at": "2026-05-20T07:07:54",
@@ -85591,9 +85931,9 @@
         {
           "id": 578784059,
           "steps": null,
-          "start_time": "2026-05-19T11:11:01.000000Z",
-          "updated_at": "2026-05-19T14:22:27",
-          "points": 3.076923076923077,
+          "start_time": "2026-05-19T11:11:00.000000Z",
+          "updated_at": "2026-07-26T16:58:49",
+          "points": 23.9,
           "created_at": "2026-05-19T14:22:27",
           "calories": 30,
           "distance_miles": null,
@@ -86458,8 +86798,8 @@
         "location_longitude": null
       },
       "duration": 45,
-      "updated_at": "2026-05-19T17:08:00.271300Z",
-      "points": 6.666666666666667,
+      "updated_at": "2026-07-26T16:38:47.345721Z",
+      "points": 26.38,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-19T17:08:00.271300Z",
       "calories": null,
@@ -86476,6 +86816,14 @@
       "photo_url": "https://cdn.gymrats.app/92111e24-ff9c-44c9-9807-326493c5bf0d.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128811734,
+          "updated_at": "2026-07-26T16:38:33",
+          "created_at": "2026-07-26T16:38:33",
+          "account_id": 3025172,
+          "workout_id": 636751157,
+          "reaction": "🎁"
+        },
         {
           "id": 118823673,
           "updated_at": "2026-05-19T17:09:25",
@@ -86548,8 +86896,8 @@
           "id": 578890391,
           "steps": null,
           "start_time": "2026-05-19T17:07:00.000000Z",
-          "updated_at": "2026-05-19T17:08:00",
-          "points": 6.666666666666667,
+          "updated_at": "2026-07-26T16:38:47",
+          "points": 26.38,
           "created_at": "2026-05-19T17:08:00",
           "calories": null,
           "distance_miles": null,
@@ -87416,8 +87764,8 @@
         "location_longitude": null
       },
       "duration": 45,
-      "updated_at": "2026-05-19T18:37:22.727703Z",
-      "points": 6.669135802469135,
+      "updated_at": "2026-07-26T16:32:15.990473Z",
+      "points": 23.9,
       "timezone": "+02:00",
       "created_at": "2026-05-19T18:37:22.727703Z",
       "calories": 243,
@@ -87434,6 +87782,14 @@
       "photo_url": "https://cdn.gymrats.app/8380e237-a9b7-4654-b867-a3991b5bda85.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128811037,
+          "updated_at": "2026-07-26T16:32:18",
+          "created_at": "2026-07-26T16:32:18",
+          "account_id": 3025172,
+          "workout_id": 636819796,
+          "reaction": "🎁"
+        },
         {
           "id": 118977670,
           "updated_at": "2026-05-20T07:07:20",
@@ -87569,9 +87925,9 @@
         {
           "id": 578934423,
           "steps": 10,
-          "start_time": "2026-05-19T16:15:10.000000Z",
-          "updated_at": "2026-05-19T18:37:22",
-          "points": 6.669135802469135,
+          "start_time": "2026-05-19T16:15:00.000000Z",
+          "updated_at": "2026-07-26T16:32:15",
+          "points": 23.9,
           "created_at": "2026-05-19T18:37:22",
           "calories": 243,
           "distance_miles": null,
@@ -88982,8 +89338,8 @@
         "location_longitude": null
       },
       "duration": 29,
-      "updated_at": "2026-05-19T19:41:34.564973Z",
-      "points": 6.859933333333333,
+      "updated_at": "2026-07-26T16:55:54.222975Z",
+      "points": 7.22,
       "timezone": "+02:00",
       "created_at": "2026-05-19T19:41:34.564973Z",
       "calories": 304,
@@ -89000,6 +89356,14 @@
       "photo_url": "https://cdn.gymrats.app/ffdeaa6b-f6ba-4f20-9d62-5b7ae9c3288e.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128813620,
+          "updated_at": "2026-07-26T16:55:56",
+          "created_at": "2026-07-26T16:55:56",
+          "account_id": 3025172,
+          "workout_id": 636879154,
+          "reaction": "🎁"
+        },
         {
           "id": 118977644,
           "updated_at": "2026-05-20T07:06:50",
@@ -89023,9 +89387,9 @@
         {
           "id": 578969537,
           "steps": 4316,
-          "start_time": "2026-05-19T17:41:03.000000Z",
-          "updated_at": "2026-05-19T19:41:34",
-          "points": 6.859933333333333,
+          "start_time": "2026-05-19T17:41:00.000000Z",
+          "updated_at": "2026-07-26T16:55:54",
+          "points": 7.22,
           "created_at": "2026-05-19T19:41:34",
           "calories": 304,
           "distance_miles": "4.12",
@@ -89296,8 +89660,8 @@
         "location_longitude": null
       },
       "duration": 29,
-      "updated_at": "2026-05-19T19:43:50.601627Z",
-      "points": 3.78182965248,
+      "updated_at": "2026-07-26T17:12:42.854314Z",
+      "points": 23.9,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-19T19:43:50.601627Z",
       "calories": 241,
@@ -89313,16 +89677,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/37348171-58d0-4df1-8ce7-ac322548aaf2.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128815248,
+          "updated_at": "2026-07-26T17:12:45",
+          "created_at": "2026-07-26T17:12:45",
+          "account_id": 3025172,
+          "workout_id": 636881643,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 578970945,
           "steps": null,
-          "start_time": "2026-05-18T08:02:43.000000Z",
-          "updated_at": "2026-05-19T19:43:50",
-          "points": 3.78182965248,
+          "start_time": "2026-05-18T08:02:00.000000Z",
+          "updated_at": "2026-07-26T17:12:42",
+          "points": 23.9,
           "created_at": "2026-05-19T19:43:50",
           "calories": 241,
           "distance_miles": "9.45",
@@ -93466,8 +93839,8 @@
         "location_longitude": null
       },
       "duration": 51,
-      "updated_at": "2026-07-24T13:52:27.107516Z",
-      "points": 19.11,
+      "updated_at": "2026-07-26T16:15:01.134128Z",
+      "points": 20.65,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-20T15:20:12.165947Z",
       "calories": null,
@@ -93524,8 +93897,8 @@
           "id": 579799729,
           "steps": null,
           "start_time": "2026-05-20T15:19:00.000000Z",
-          "updated_at": "2026-07-24T13:52:27",
-          "points": 19.11,
+          "updated_at": "2026-07-26T16:15:01",
+          "points": 20.65,
           "created_at": "2026-05-20T15:20:12",
           "calories": null,
           "distance_miles": null,
@@ -94748,8 +95121,8 @@
         "location_longitude": null
       },
       "duration": 63,
-      "updated_at": "2026-05-20T17:44:03.181027Z",
-      "points": 9.419753086419753,
+      "updated_at": "2026-07-26T16:54:51.548992Z",
+      "points": 9.86,
       "timezone": "+02:00",
       "created_at": "2026-05-20T17:44:03.181027Z",
       "calories": 214,
@@ -94765,16 +95138,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/4e610e14-0008-4d6a-94af-cf89316d9c45.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128813504,
+          "updated_at": "2026-07-26T16:54:53",
+          "created_at": "2026-07-26T16:54:53",
+          "account_id": 3025172,
+          "workout_id": 638279913,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 579883242,
           "steps": 536,
-          "start_time": "2026-05-19T04:43:10.000000Z",
-          "updated_at": "2026-05-20T17:44:03",
-          "points": 9.419753086419753,
+          "start_time": "2026-05-19T04:43:00.000000Z",
+          "updated_at": "2026-07-26T16:54:51",
+          "points": 9.86,
           "created_at": "2026-05-20T17:44:03",
           "calories": 214,
           "distance_miles": null,
@@ -97569,8 +97951,8 @@
         "location_longitude": null
       },
       "duration": 60,
-      "updated_at": "2026-05-20T19:01:18.548637Z",
-      "points": 10.714285714285715,
+      "updated_at": "2026-07-26T16:13:49.867133Z",
+      "points": 11.47,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-20T19:01:18.548637Z",
       "calories": null,
@@ -97587,6 +97969,14 @@
       "photo_url": "https://cdn.gymrats.app/5459b25f-cb7d-49d8-a3f2-fac8bc0425f4.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128808765,
+          "updated_at": "2026-07-26T16:13:52",
+          "created_at": "2026-07-26T16:13:52",
+          "account_id": 3025172,
+          "workout_id": 638340169,
+          "reaction": "🎁"
+        },
         {
           "id": 119079190,
           "updated_at": "2026-05-20T20:19:57",
@@ -97611,8 +98001,8 @@
           "id": 579920288,
           "steps": null,
           "start_time": "2026-05-20T15:30:00.000000Z",
-          "updated_at": "2026-05-20T19:01:18",
-          "points": 10.714285714285715,
+          "updated_at": "2026-07-26T16:13:49",
+          "points": 11.47,
           "created_at": "2026-05-20T19:01:18",
           "calories": null,
           "distance_miles": null,
@@ -102653,8 +103043,8 @@
         "location_longitude": null
       },
       "duration": 43,
-      "updated_at": "2026-05-20T21:04:27.368111Z",
-      "points": 7.775205357142858,
+      "updated_at": "2026-07-26T16:28:42.491127Z",
+      "points": 27.38,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-20T21:04:27.368111Z",
       "calories": 168,
@@ -102671,6 +103061,14 @@
       "photo_url": "https://cdn.gymrats.app/d66a44d7-5079-431b-a966-29871f9ba303.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128810694,
+          "updated_at": "2026-07-26T16:29:02",
+          "created_at": "2026-07-26T16:29:02",
+          "account_id": 3025172,
+          "workout_id": 638486788,
+          "reaction": "🎁"
+        },
         {
           "id": 119092501,
           "updated_at": "2026-05-20T21:24:19",
@@ -102702,9 +103100,9 @@
         {
           "id": 580006244,
           "steps": null,
-          "start_time": "2026-05-20T16:31:08.000000Z",
-          "updated_at": "2026-05-20T21:04:27",
-          "points": 7.775205357142858,
+          "start_time": "2026-05-20T16:31:00.000000Z",
+          "updated_at": "2026-07-26T16:28:42",
+          "points": 27.38,
           "created_at": "2026-05-20T21:04:27",
           "calories": 168,
           "distance_miles": null,
@@ -108038,8 +108436,8 @@
         "location_longitude": null
       },
       "duration": 37,
-      "updated_at": "2026-05-21T17:23:09.510875Z",
-      "points": 5.607407407407408,
+      "updated_at": "2026-07-26T17:27:25.235877Z",
+      "points": 5.62,
       "timezone": "+02:00",
       "created_at": "2026-05-21T17:23:09.510875Z",
       "calories": 227,
@@ -108055,16 +108453,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/131856a6-2d0c-4dcf-bf4a-47733e63ecb3.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128816586,
+          "updated_at": "2026-07-26T17:27:27",
+          "created_at": "2026-07-26T17:27:27",
+          "account_id": 3025172,
+          "workout_id": 639697762,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 580805999,
           "steps": 32,
-          "start_time": "2026-05-21T13:53:11.000000Z",
-          "updated_at": "2026-05-21T17:23:09",
-          "points": 5.607407407407408,
+          "start_time": "2026-05-21T13:53:00.000000Z",
+          "updated_at": "2026-07-26T17:27:25",
+          "points": 5.62,
           "created_at": "2026-05-21T17:23:09",
           "calories": 227,
           "distance_miles": null,
@@ -109621,8 +110028,8 @@
         "location_longitude": null
       },
       "duration": 41,
-      "updated_at": "2026-06-19T10:52:42.414890Z",
-      "points": 9.86,
+      "updated_at": "2026-07-26T16:25:33.286417Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-21T20:19:37.509980Z",
       "calories": 256,
@@ -109654,9 +110061,9 @@
         {
           "id": 580892761,
           "steps": null,
-          "start_time": "2026-06-19T07:59:00.000000Z",
-          "updated_at": "2026-06-19T10:52:42",
-          "points": 9.86,
+          "start_time": "2026-07-26T07:59:00.000000Z",
+          "updated_at": "2026-07-26T16:25:33",
+          "points": 30,
           "created_at": "2026-05-21T20:19:37",
           "calories": 256,
           "distance_miles": "11.03",
@@ -112120,8 +112527,8 @@
         "location_longitude": null
       },
       "duration": 63,
-      "updated_at": "2026-07-24T13:38:35.588246Z",
-      "points": 18.4,
+      "updated_at": "2026-07-26T16:37:17.951906Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-22T07:28:09.251695Z",
       "calories": 288,
@@ -112139,9 +112546,9 @@
       "activity_count": 1,
       "reactions": [
         {
-          "id": 128569418,
-          "updated_at": "2026-07-24T13:38:38",
-          "created_at": "2026-07-24T13:38:38",
+          "id": 128811580,
+          "updated_at": "2026-07-26T16:37:21",
+          "created_at": "2026-07-26T16:37:21",
           "account_id": 3025172,
           "workout_id": 640542978,
           "reaction": "🎁"
@@ -112154,8 +112561,8 @@
           "id": 581342239,
           "steps": 2006,
           "start_time": "2026-05-21T16:06:00.000000Z",
-          "updated_at": "2026-07-24T13:38:35",
-          "points": 18.4,
+          "updated_at": "2026-07-26T16:37:17",
+          "points": 30,
           "created_at": "2026-05-22T07:28:09",
           "calories": 288,
           "distance_miles": "0.16",
@@ -114116,8 +114523,8 @@
         "location_longitude": null
       },
       "duration": 195,
-      "updated_at": "2026-05-22T14:45:11.901822Z",
-      "points": 10.667375769600001,
+      "updated_at": "2026-07-26T17:11:07.425012Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-22T14:05:43.697088Z",
       "calories": 502,
@@ -114134,6 +114541,14 @@
       "photo_url": "https://cdn.gymrats.app/c3c42d0f-7290-43e2-b1f3-3fdfd3c9fc81.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128815109,
+          "updated_at": "2026-07-26T17:11:16",
+          "created_at": "2026-07-26T17:11:16",
+          "account_id": 3025172,
+          "workout_id": 640857859,
+          "reaction": "🎁"
+        },
         {
           "id": 119475934,
           "updated_at": "2026-05-22T18:15:30",
@@ -114181,9 +114596,9 @@
         {
           "id": 581554156,
           "steps": null,
-          "start_time": "2026-05-22T10:36:57.000000Z",
-          "updated_at": "2026-05-22T14:05:43",
-          "points": 10.667375769600001,
+          "start_time": "2026-05-22T10:36:00.000000Z",
+          "updated_at": "2026-07-26T17:11:07",
+          "points": 30,
           "created_at": "2026-05-22T14:05:43",
           "calories": 502,
           "distance_miles": "26.67",
@@ -114877,8 +115292,8 @@
         "location_longitude": null
       },
       "duration": 28,
-      "updated_at": "2026-05-22T16:22:03.383512Z",
-      "points": 8.350866666666668,
+      "updated_at": "2026-07-26T16:54:16.737072Z",
+      "points": 26.67,
       "timezone": "+02:00",
       "created_at": "2026-05-22T16:22:03.383512Z",
       "calories": 331,
@@ -114902,6 +115317,14 @@
           "account_id": 49911,
           "workout_id": 640978621,
           "reaction": "🦿"
+        },
+        {
+          "id": 128813454,
+          "updated_at": "2026-07-26T16:54:19",
+          "created_at": "2026-07-26T16:54:19",
+          "account_id": 3025172,
+          "workout_id": 640978621,
+          "reaction": "🎁"
         }
       ],
       "activity_metric_amount": null,
@@ -114910,9 +115333,9 @@
         {
           "id": 581632616,
           "steps": 4786,
-          "start_time": "2026-05-22T15:39:49.000000Z",
-          "updated_at": "2026-05-22T16:22:03",
-          "points": 8.350866666666668,
+          "start_time": "2026-05-22T15:39:00.000000Z",
+          "updated_at": "2026-07-26T16:54:16",
+          "points": 26.67,
           "created_at": "2026-05-22T16:22:03",
           "calories": 331,
           "distance_miles": "5.01",
@@ -114956,8 +115379,8 @@
         "location_longitude": null
       },
       "duration": 65,
-      "updated_at": "2026-05-22T16:26:35.177960Z",
-      "points": 11.607142857142858,
+      "updated_at": "2026-07-26T16:15:23.970720Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-22T16:26:35.177960Z",
       "calories": null,
@@ -114983,6 +115406,14 @@
           "reaction": "🔥"
         },
         {
+          "id": 128809008,
+          "updated_at": "2026-07-26T16:15:25",
+          "created_at": "2026-07-26T16:15:25",
+          "account_id": 3025172,
+          "workout_id": 640982640,
+          "reaction": "🎁"
+        },
+        {
           "id": 127484737,
           "updated_at": "2026-07-17T09:32:00",
           "created_at": "2026-07-17T09:32:00",
@@ -114998,8 +115429,8 @@
           "id": 581635234,
           "steps": null,
           "start_time": "2026-05-22T16:25:00.000000Z",
-          "updated_at": "2026-05-22T16:26:35",
-          "points": 11.607142857142858,
+          "updated_at": "2026-07-26T16:15:23",
+          "points": 30,
           "created_at": "2026-05-22T16:26:35",
           "calories": null,
           "distance_miles": null,
@@ -117563,8 +117994,8 @@
         "location_longitude": null
       },
       "duration": 34,
-      "updated_at": "2026-05-22T19:18:53.709230Z",
-      "points": 6.6787,
+      "updated_at": "2026-07-26T16:24:38.727861Z",
+      "points": 16.7,
       "timezone": "+02:00",
       "created_at": "2026-05-22T19:18:53.709230Z",
       "calories": 260,
@@ -117598,6 +118029,14 @@
           "reaction": "🦿"
         },
         {
+          "id": 128810213,
+          "updated_at": "2026-07-26T16:24:40",
+          "created_at": "2026-07-26T16:24:40",
+          "account_id": 3025172,
+          "workout_id": 641108615,
+          "reaction": "🎁"
+        },
+        {
           "id": 120698085,
           "updated_at": "2026-05-29T20:21:30",
           "created_at": "2026-05-29T20:21:30",
@@ -117620,9 +118059,9 @@
         {
           "id": 581715656,
           "steps": 5662,
-          "start_time": "2026-05-22T15:04:28.000000Z",
-          "updated_at": "2026-05-22T19:18:53",
-          "points": 6.6787,
+          "start_time": "2026-05-22T15:04:00.000000Z",
+          "updated_at": "2026-07-26T16:24:38",
+          "points": 16.7,
           "created_at": "2026-05-22T19:18:53",
           "calories": 260,
           "distance_miles": "4.01",
@@ -121020,8 +121459,8 @@
         "location_longitude": null
       },
       "duration": 72,
-      "updated_at": "2026-05-23T10:21:26.865792Z",
-      "points": 2.1533333333333333,
+      "updated_at": "2026-07-26T16:16:07.905646Z",
+      "points": 12.33,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-23T10:21:26.865792Z",
       "calories": 198,
@@ -121045,6 +121484,14 @@
           "account_id": 49911,
           "workout_id": 641739437,
           "reaction": "🐀"
+        },
+        {
+          "id": 128809098,
+          "updated_at": "2026-07-26T16:16:10",
+          "created_at": "2026-07-26T16:16:10",
+          "account_id": 3025172,
+          "workout_id": 641739437,
+          "reaction": "🎁"
         }
       ],
       "activity_metric_amount": null,
@@ -121053,9 +121500,9 @@
         {
           "id": 582125108,
           "steps": null,
-          "start_time": "2026-05-23T08:06:53.000000Z",
-          "updated_at": "2026-05-23T10:21:26",
-          "points": 2.1533333333333333,
+          "start_time": "2026-05-23T08:06:00.000000Z",
+          "updated_at": "2026-07-26T16:16:07",
+          "points": 12.33,
           "created_at": "2026-05-23T10:21:26",
           "calories": 198,
           "distance_miles": "3.23",
@@ -121755,8 +122202,8 @@
         "location_longitude": null
       },
       "duration": 60,
-      "updated_at": "2026-05-23T13:03:40.237895Z",
-      "points": 10.714285714285715,
+      "updated_at": "2026-07-26T16:56:35.472429Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-23T13:03:40.237895Z",
       "calories": null,
@@ -121782,6 +122229,14 @@
           "reaction": "❤️‍🔥"
         },
         {
+          "id": 128813684,
+          "updated_at": "2026-07-26T16:56:37",
+          "created_at": "2026-07-26T16:56:37",
+          "account_id": 3025172,
+          "workout_id": 641862075,
+          "reaction": "🎁"
+        },
+        {
           "id": 119599353,
           "updated_at": "2026-05-23T14:10:00",
           "created_at": "2026-05-23T14:10:00",
@@ -121797,8 +122252,8 @@
           "id": 582208747,
           "steps": null,
           "start_time": "2026-05-23T08:30:00.000000Z",
-          "updated_at": "2026-05-23T13:03:40",
-          "points": 10.714285714285715,
+          "updated_at": "2026-07-26T16:56:35",
+          "points": 30,
           "created_at": "2026-05-23T13:03:40",
           "calories": null,
           "distance_miles": null,
@@ -122237,8 +122692,8 @@
         "location_longitude": null
       },
       "duration": 26,
-      "updated_at": "2026-05-23T14:56:32.019561Z",
-      "points": 5.385401472000001,
+      "updated_at": "2026-07-26T16:49:02.772020Z",
+      "points": 15.52,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-23T14:54:04.555093Z",
       "calories": 271,
@@ -122262,6 +122717,14 @@
           "account_id": 49911,
           "workout_id": 642017834,
           "reaction": "🐀"
+        },
+        {
+          "id": 128812838,
+          "updated_at": "2026-07-26T16:49:05",
+          "created_at": "2026-07-26T16:49:05",
+          "account_id": 3025172,
+          "workout_id": 642017834,
+          "reaction": "🎁"
         },
         {
           "id": 119665481,
@@ -122310,9 +122773,9 @@
         {
           "id": 582310629,
           "steps": null,
-          "start_time": "2026-05-23T14:15:54.000000Z",
-          "updated_at": "2026-05-23T14:54:04",
-          "points": 5.385401472000001,
+          "start_time": "2026-05-23T14:15:00.000000Z",
+          "updated_at": "2026-07-26T16:49:02",
+          "points": 15.52,
           "created_at": "2026-05-23T14:54:04",
           "calories": 271,
           "distance_miles": "3.23",
@@ -126091,8 +126554,8 @@
         "location_longitude": null
       },
       "duration": 30,
-      "updated_at": "2026-05-24T09:11:18.726537Z",
-      "points": 1.8399999999999999,
+      "updated_at": "2026-07-26T16:21:57.702060Z",
+      "points": 12,
       "timezone": "Europe/Athens",
       "created_at": "2026-05-24T09:11:18.726537Z",
       "calories": null,
@@ -126109,6 +126572,14 @@
       "photo_url": "https://cdn.gymrats.app/0cb2f31e-e8b5-4398-a953-94b95dd9ae93.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128809913,
+          "updated_at": "2026-07-26T16:21:59",
+          "created_at": "2026-07-26T16:21:59",
+          "account_id": 3025172,
+          "workout_id": 642579424,
+          "reaction": "🎁"
+        },
         {
           "id": 119711888,
           "updated_at": "2026-05-24T14:37:55",
@@ -126157,8 +126628,8 @@
           "id": 582708257,
           "steps": null,
           "start_time": "2026-05-24T09:04:00.000000Z",
-          "updated_at": "2026-05-24T09:11:18",
-          "points": 1.8399999999999999,
+          "updated_at": "2026-07-26T16:21:57",
+          "points": 12,
           "created_at": "2026-05-24T09:11:18",
           "calories": null,
           "distance_miles": "4.6",
@@ -126672,8 +127143,8 @@
         "location_longitude": null
       },
       "duration": 45,
-      "updated_at": "2026-05-24T09:41:43.561774Z",
-      "points": 8.035714285714286,
+      "updated_at": "2026-07-26T17:14:32.832130Z",
+      "points": 29.2,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-24T09:41:43.561774Z",
       "calories": null,
@@ -126690,6 +127161,14 @@
       "photo_url": "https://cdn.gymrats.app/d3253d89-d35c-4bf4-a142-2e25ae3081f2.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128815402,
+          "updated_at": "2026-07-26T17:14:38",
+          "created_at": "2026-07-26T17:14:38",
+          "account_id": 3025172,
+          "workout_id": 642582842,
+          "reaction": "🎁"
+        },
         {
           "id": 119702169,
           "updated_at": "2026-05-24T13:20:05",
@@ -126778,8 +127257,8 @@
           "id": 582711031,
           "steps": null,
           "start_time": "2026-05-24T08:30:00.000000Z",
-          "updated_at": "2026-05-24T09:41:43",
-          "points": 8.035714285714286,
+          "updated_at": "2026-07-26T17:14:32",
+          "points": 29.2,
           "created_at": "2026-05-24T09:41:43",
           "calories": null,
           "distance_miles": null,
@@ -127600,8 +128079,8 @@
         "location_longitude": null
       },
       "duration": 97,
-      "updated_at": "2026-05-24T11:39:59.722242Z",
-      "points": 11.33036112384,
+      "updated_at": "2026-07-26T16:33:57.492085Z",
+      "points": 21.16,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-24T11:39:59.722242Z",
       "calories": 572,
@@ -127617,16 +128096,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/d509d848-4285-47a6-b19b-b8ca9c54ff52.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128811185,
+          "updated_at": "2026-07-26T16:33:59",
+          "created_at": "2026-07-26T16:33:59",
+          "account_id": 3025172,
+          "workout_id": 642618469,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 582737720,
           "steps": null,
-          "start_time": "2026-05-21T16:59:51.000000Z",
-          "updated_at": "2026-05-24T11:39:59",
-          "points": 11.33036112384,
+          "start_time": "2026-05-21T16:59:00.000000Z",
+          "updated_at": "2026-07-26T16:33:57",
+          "points": 21.16,
           "created_at": "2026-05-24T11:39:59",
           "calories": 572,
           "distance_miles": "28.33",
@@ -129270,8 +129758,8 @@
         "location_longitude": null
       },
       "duration": 60,
-      "updated_at": "2026-07-22T16:04:11.295242Z",
-      "points": 11.19,
+      "updated_at": "2026-07-26T17:34:45.138041Z",
+      "points": 12.39,
       "timezone": "+01:00",
       "created_at": "2026-05-24T14:38:50.261324Z",
       "calories": 176,
@@ -129289,9 +129777,9 @@
       "activity_count": 1,
       "reactions": [
         {
-          "id": 128230740,
-          "updated_at": "2026-07-22T16:04:15",
-          "created_at": "2026-07-22T16:04:15",
+          "id": 128817160,
+          "updated_at": "2026-07-26T17:34:49",
+          "created_at": "2026-07-26T17:34:49",
           "account_id": 3025172,
           "workout_id": 642782852,
           "reaction": "🎁"
@@ -129352,8 +129840,8 @@
           "id": 582851716,
           "steps": null,
           "start_time": "2026-05-24T12:44:00.000000Z",
-          "updated_at": "2026-07-22T16:04:11",
-          "points": 11.19,
+          "updated_at": "2026-07-26T17:34:45",
+          "points": 12.39,
           "created_at": "2026-05-24T14:38:50",
           "calories": 176,
           "distance_miles": null,
@@ -129859,8 +130347,8 @@
         "location_longitude": null
       },
       "duration": 23,
-      "updated_at": "2026-05-24T16:52:29.371284Z",
-      "points": 2.1895446988800003,
+      "updated_at": "2026-07-26T16:41:21.668716Z",
+      "points": 12.39,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-24T16:52:29.371284Z",
       "calories": 104,
@@ -129876,16 +130364,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/7d021a03-a6d1-466c-9de1-3269a7ac1f1e.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128812061,
+          "updated_at": "2026-07-26T16:41:23",
+          "created_at": "2026-07-26T16:41:23",
+          "account_id": 3025172,
+          "workout_id": 642932091,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 582956411,
           "steps": null,
-          "start_time": "2026-05-24T16:13:20.000000Z",
-          "updated_at": "2026-05-24T16:52:29",
-          "points": 2.1895446988800003,
+          "start_time": "2026-05-24T16:13:00.000000Z",
+          "updated_at": "2026-07-26T16:41:21",
+          "points": 12.39,
           "created_at": "2026-05-24T16:52:29",
           "calories": 104,
           "distance_miles": "5.47",
@@ -134412,8 +134909,8 @@
         "location_longitude": null
       },
       "duration": 47,
-      "updated_at": "2026-05-25T16:21:32.938092Z",
-      "points": 8.472654761904762,
+      "updated_at": "2026-07-26T17:24:20.924289Z",
+      "points": 26.67,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-25T16:21:32.938092Z",
       "calories": 104,
@@ -134429,16 +134926,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/bfd092e7-ee0e-4904-9f24-a6f6edc963c1.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128816337,
+          "updated_at": "2026-07-26T17:24:22",
+          "created_at": "2026-07-26T17:24:22",
+          "account_id": 3025172,
+          "workout_id": 643740126,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 583537002,
           "steps": null,
-          "start_time": "2026-05-25T15:14:44.000000Z",
-          "updated_at": "2026-05-25T16:21:32",
-          "points": 8.472654761904762,
+          "start_time": "2026-05-25T15:14:00.000000Z",
+          "updated_at": "2026-07-26T17:24:20",
+          "points": 26.67,
           "created_at": "2026-05-25T16:21:32",
           "calories": 104,
           "distance_miles": null,
@@ -135319,8 +135825,8 @@
         "location_longitude": null
       },
       "duration": 41,
-      "updated_at": "2026-05-25T20:15:54.252699Z",
-      "points": 9.233333333333334,
+      "updated_at": "2026-07-26T17:17:38.993541Z",
+      "points": 29.2,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-25T20:15:54.252699Z",
       "calories": null,
@@ -135336,16 +135842,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/6ee6afd0-3ab3-4aaf-a228-fc0637bb17db.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128815730,
+          "updated_at": "2026-07-26T17:17:43",
+          "created_at": "2026-07-26T17:17:43",
+          "account_id": 3025172,
+          "workout_id": 643944299,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 583665462,
           "steps": null,
-          "start_time": "2026-05-25T20:15:38.458644Z",
-          "updated_at": "2026-05-25T20:15:54",
-          "points": 9.233333333333334,
+          "start_time": "2026-05-25T20:15:00.000000Z",
+          "updated_at": "2026-07-26T17:17:38",
+          "points": 29.2,
           "created_at": "2026-05-25T20:15:54",
           "calories": null,
           "distance_miles": "5.54",
@@ -135994,8 +136509,8 @@
         "location_longitude": null
       },
       "duration": 66,
-      "updated_at": "2026-05-25T22:20:56.222431Z",
-      "points": 9.857555555555555,
+      "updated_at": "2026-07-26T17:33:23.224159Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-25T22:20:56.222431Z",
       "calories": 258,
@@ -136012,6 +136527,14 @@
       "photo_url": "https://cdn.gymrats.app/297d765f-1b8e-46be-b7c3-c19867a0147c.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128817049,
+          "updated_at": "2026-07-26T17:33:25",
+          "created_at": "2026-07-26T17:33:25",
+          "account_id": 3025172,
+          "workout_id": 644184124,
+          "reaction": "🎁"
+        },
         {
           "id": 119993661,
           "updated_at": "2026-05-26T09:23:09",
@@ -136043,9 +136566,9 @@
         {
           "id": 583804462,
           "steps": null,
-          "start_time": "2026-05-25T17:48:30.000000Z",
-          "updated_at": "2026-05-25T22:20:56",
-          "points": 9.857555555555555,
+          "start_time": "2026-05-25T17:48:00.000000Z",
+          "updated_at": "2026-07-26T17:33:23",
+          "points": 30,
           "created_at": "2026-05-25T22:20:56",
           "calories": 258,
           "distance_miles": null,
@@ -136672,8 +137195,8 @@
         "location_longitude": null
       },
       "duration": 25,
-      "updated_at": "2026-05-26T06:49:47.365461Z",
-      "points": 2.3444923392,
+      "updated_at": "2026-07-26T17:02:55.134134Z",
+      "points": 22.44,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-26T06:49:47.365461Z",
       "calories": 79,
@@ -136689,16 +137212,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/bbb9699d-26a1-45a7-811d-76f0d07c4c60.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128814321,
+          "updated_at": "2026-07-26T17:03:00",
+          "created_at": "2026-07-26T17:03:00",
+          "account_id": 3025172,
+          "workout_id": 644759407,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 584189265,
           "steps": null,
-          "start_time": "2026-05-26T06:16:29.000000Z",
-          "updated_at": "2026-05-26T06:49:47",
-          "points": 2.3444923392,
+          "start_time": "2026-05-26T06:16:00.000000Z",
+          "updated_at": "2026-07-26T17:02:55",
+          "points": 22.44,
           "created_at": "2026-05-26T06:49:47",
           "calories": 79,
           "distance_miles": "5.86",
@@ -136742,8 +137274,8 @@
         "location_longitude": null
       },
       "duration": 29,
-      "updated_at": "2026-05-26T07:05:16.799469Z",
-      "points": 4.530769230769231,
+      "updated_at": "2026-07-26T17:28:35.380732Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-26T07:05:16.799469Z",
       "calories": 90,
@@ -136761,6 +137293,14 @@
       "activity_count": 1,
       "reactions": [
         {
+          "id": 128816681,
+          "updated_at": "2026-07-26T17:28:52",
+          "created_at": "2026-07-26T17:28:52",
+          "account_id": 3025172,
+          "workout_id": 644760315,
+          "reaction": "🎁"
+        },
+        {
           "id": 120077809,
           "updated_at": "2026-05-26T18:56:23",
           "created_at": "2026-05-26T18:56:23",
@@ -136775,9 +137315,9 @@
         {
           "id": 584189966,
           "steps": null,
-          "start_time": "2026-05-26T05:53:10.000000Z",
-          "updated_at": "2026-05-26T07:05:16",
-          "points": 4.530769230769231,
+          "start_time": "2026-05-26T05:53:00.000000Z",
+          "updated_at": "2026-07-26T17:28:35",
+          "points": 30,
           "created_at": "2026-05-26T07:05:16",
           "calories": 90,
           "distance_miles": null,
@@ -138174,8 +138714,8 @@
         "location_longitude": null
       },
       "duration": 41,
-      "updated_at": "2026-05-26T17:32:26.746172Z",
-      "points": 6.1604938271604945,
+      "updated_at": "2026-07-26T17:03:29.804244Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-26T17:32:26.746172Z",
       "calories": 104,
@@ -138191,7 +138731,16 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/36d72ed9-b44c-44d5-b601-ee5aa579d14b.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128814367,
+          "updated_at": "2026-07-26T17:03:35",
+          "created_at": "2026-07-26T17:03:35",
+          "account_id": 3025172,
+          "workout_id": 645324352,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
@@ -138199,8 +138748,8 @@
           "id": 584567911,
           "steps": 13,
           "start_time": "2026-05-26T16:18:00.000000Z",
-          "updated_at": "2026-05-26T17:32:26",
-          "points": 6.1604938271604945,
+          "updated_at": "2026-07-26T17:03:29",
+          "points": 30,
           "created_at": "2026-05-26T17:32:26",
           "calories": 104,
           "distance_miles": null,
@@ -141788,8 +142337,8 @@
         "location_longitude": null
       },
       "duration": 16,
-      "updated_at": "2026-05-27T05:19:07.665407Z",
-      "points": 3.0818181818181816,
+      "updated_at": "2026-07-26T16:53:03.649897Z",
+      "points": 13.51,
       "timezone": "+02:00",
       "created_at": "2026-05-27T05:19:07.665407Z",
       "calories": 80,
@@ -141806,6 +142355,14 @@
       "photo_url": "https://cdn.gymrats.app/87bfc228-5035-425b-838a-afe2ed6ae722.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128813321,
+          "updated_at": "2026-07-26T16:53:05",
+          "created_at": "2026-07-26T16:53:05",
+          "account_id": 3025172,
+          "workout_id": 646265742,
+          "reaction": "🎁"
+        },
         {
           "id": 120215037,
           "updated_at": "2026-05-27T07:53:10",
@@ -141854,8 +142411,8 @@
           "id": 585165058,
           "steps": 76,
           "start_time": "2026-05-27T04:36:00.000000Z",
-          "updated_at": "2026-05-27T05:19:07",
-          "points": 3.0818181818181816,
+          "updated_at": "2026-07-26T16:53:03",
+          "points": 13.51,
           "created_at": "2026-05-27T05:19:07",
           "calories": 80,
           "distance_miles": null,
@@ -143291,8 +143848,8 @@
         "location_longitude": null
       },
       "duration": 98,
-      "updated_at": "2026-07-26T12:03:19.863659Z",
-      "points": 20.62,
+      "updated_at": "2026-07-26T16:38:06.803272Z",
+      "points": 21.16,
       "timezone": "+02:00",
       "created_at": "2026-05-27T16:55:55.360104Z",
       "calories": 914,
@@ -143325,8 +143882,8 @@
           "id": 585518105,
           "steps": 3858,
           "start_time": "2026-05-27T15:01:00.000000Z",
-          "updated_at": "2026-07-26T12:03:19",
-          "points": 20.62,
+          "updated_at": "2026-07-26T16:38:06",
+          "points": 21.16,
           "created_at": "2026-05-27T16:55:55",
           "calories": 914,
           "distance_miles": "0.39",
@@ -143506,8 +144063,8 @@
         "location_longitude": null
       },
       "duration": 67,
-      "updated_at": "2026-05-27T19:09:52.482361Z",
-      "points": 5.15093078016,
+      "updated_at": "2026-07-26T17:11:55.967512Z",
+      "points": 5.62,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-27T17:16:23.113381Z",
       "calories": 201,
@@ -143524,6 +144081,14 @@
       "photo_url": "https://cdn.gymrats.app/5901fe70-144a-4ded-8cd6-04f980bedde9.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128815186,
+          "updated_at": "2026-07-26T17:11:59",
+          "created_at": "2026-07-26T17:11:59",
+          "account_id": 3025172,
+          "workout_id": 646809643,
+          "reaction": "🎁"
+        },
         {
           "id": 120307016,
           "updated_at": "2026-05-27T19:37:12",
@@ -143659,9 +144224,9 @@
         {
           "id": 585528655,
           "steps": null,
-          "start_time": "2026-05-27T15:58:08.000000Z",
-          "updated_at": "2026-05-27T17:16:23",
-          "points": 5.15093078016,
+          "start_time": "2026-05-27T15:58:00.000000Z",
+          "updated_at": "2026-07-26T17:11:55",
+          "points": 5.62,
           "created_at": "2026-05-27T17:16:23",
           "calories": 201,
           "distance_miles": "12.88",
@@ -143705,8 +144270,8 @@
         "location_longitude": null
       },
       "duration": 43,
-      "updated_at": "2026-05-27T18:08:50.182505Z",
-      "points": 7.752976190476191,
+      "updated_at": "2026-07-26T17:03:57.046663Z",
+      "points": 23.9,
       "timezone": "+02:00",
       "created_at": "2026-05-27T18:08:50.182505Z",
       "calories": 336,
@@ -143722,16 +144287,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/4dfa9fa9-54e7-48f0-9342-4090420f747b.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128814397,
+          "updated_at": "2026-07-26T17:03:59",
+          "created_at": "2026-07-26T17:03:59",
+          "account_id": 3025172,
+          "workout_id": 646845978,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 585551400,
           "steps": 2479,
-          "start_time": "2026-05-27T15:15:59.000000Z",
-          "updated_at": "2026-05-27T18:08:50",
-          "points": 7.752976190476191,
+          "start_time": "2026-05-27T15:15:00.000000Z",
+          "updated_at": "2026-07-26T17:03:57",
+          "points": 23.9,
           "created_at": "2026-05-27T18:08:50",
           "calories": 336,
           "distance_miles": null,
@@ -146022,8 +146596,8 @@
         "location_longitude": null
       },
       "duration": 80,
-      "updated_at": "2026-05-27T20:45:52.326695Z",
-      "points": 11.922059259259258,
+      "updated_at": "2026-07-26T16:16:45.057429Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-27T20:45:52.326695Z",
       "calories": 507,
@@ -146039,16 +146613,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/9ce6f9aa-8eb5-4988-ab67-026045ea3c32.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128809189,
+          "updated_at": "2026-07-26T16:16:47",
+          "created_at": "2026-07-26T16:16:47",
+          "account_id": 3025172,
+          "workout_id": 646999017,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 585641947,
           "steps": 587,
-          "start_time": "2026-05-26T16:27:44.460000Z",
-          "updated_at": "2026-05-27T20:45:52",
-          "points": 11.922059259259258,
+          "start_time": "2026-05-26T16:27:00.000000Z",
+          "updated_at": "2026-07-26T16:16:45",
+          "points": 30,
           "created_at": "2026-05-27T20:45:52",
           "calories": 507,
           "distance_miles": "0",
@@ -146788,8 +147371,8 @@
         "location_longitude": null
       },
       "duration": 56,
-      "updated_at": "2026-05-28T04:46:35.716231Z",
-      "points": 13.850000000000001,
+      "updated_at": "2026-07-26T16:20:10.501052Z",
+      "points": 22.81,
       "timezone": "America/Los_Angeles",
       "created_at": "2026-05-28T04:46:35.716231Z",
       "calories": 650,
@@ -146805,16 +147388,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/bbee0bef-db27-44d2-9b1d-05af64c26e00.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128809691,
+          "updated_at": "2026-07-26T16:20:12",
+          "created_at": "2026-07-26T16:20:12",
+          "account_id": 3025172,
+          "workout_id": 647704651,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 586093148,
           "steps": null,
-          "start_time": "2026-05-28T04:45:48.366280Z",
-          "updated_at": "2026-05-28T04:46:35",
-          "points": 13.850000000000001,
+          "start_time": "2026-05-27T04:45:00.000000Z",
+          "updated_at": "2026-07-26T16:20:10",
+          "points": 22.81,
           "created_at": "2026-05-28T04:46:35",
           "calories": 650,
           "distance_miles": "8.31",
@@ -149127,8 +149719,8 @@
         "location_longitude": null
       },
       "duration": 23,
-      "updated_at": "2026-05-28T11:27:14.381904Z",
-      "points": 3.1334839999999997,
+      "updated_at": "2026-07-26T17:13:28.316791Z",
+      "points": 13.64,
       "timezone": "+02:00",
       "created_at": "2026-05-28T11:27:14.381904Z",
       "calories": 218,
@@ -149146,6 +149738,14 @@
       "activity_count": 1,
       "reactions": [
         {
+          "id": 128815312,
+          "updated_at": "2026-07-26T17:13:32",
+          "created_at": "2026-07-26T17:13:32",
+          "account_id": 3025172,
+          "workout_id": 647898872,
+          "reaction": "🎁"
+        },
+        {
           "id": 120497502,
           "updated_at": "2026-05-28T17:37:01",
           "created_at": "2026-05-28T17:37:01",
@@ -149160,9 +149760,9 @@
         {
           "id": 586222839,
           "steps": null,
-          "start_time": "2026-05-28T06:29:19.000000Z",
-          "updated_at": "2026-05-28T11:27:14",
-          "points": 3.1334839999999997,
+          "start_time": "2026-05-28T06:29:00.000000Z",
+          "updated_at": "2026-07-26T17:13:28",
+          "points": 13.64,
           "created_at": "2026-05-28T11:27:14",
           "calories": 218,
           "distance_miles": "7.83",
@@ -149755,8 +150355,8 @@
         "location_longitude": null
       },
       "duration": 46,
-      "updated_at": "2026-05-28T16:46:51.966646Z",
-      "points": 7.7918111111111115,
+      "updated_at": "2026-07-26T16:59:25.990710Z",
+      "points": 27.67,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-28T16:46:51.966646Z",
       "calories": 446,
@@ -149773,6 +150373,14 @@
       "photo_url": "https://cdn.gymrats.app/d1efc956-8ddf-46a1-9735-c342beadb77a.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128813955,
+          "updated_at": "2026-07-26T16:59:28",
+          "created_at": "2026-07-26T16:59:28",
+          "account_id": 3025172,
+          "workout_id": 648189232,
+          "reaction": "🎁"
+        },
         {
           "id": 120526104,
           "updated_at": "2026-05-28T21:29:48",
@@ -149828,9 +150436,9 @@
         {
           "id": 586418654,
           "steps": null,
-          "start_time": "2026-05-28T15:39:12.000000Z",
-          "updated_at": "2026-05-28T16:46:51",
-          "points": 7.7918111111111115,
+          "start_time": "2026-05-28T15:39:00.000000Z",
+          "updated_at": "2026-07-26T16:59:25",
+          "points": 27.67,
           "created_at": "2026-05-28T16:46:51",
           "calories": 446,
           "distance_miles": "2",
@@ -156136,8 +156744,8 @@
         "location_longitude": null
       },
       "duration": 75,
-      "updated_at": "2026-05-29T12:27:27.270118Z",
-      "points": 11.25779012345679,
+      "updated_at": "2026-07-26T16:17:14.941396Z",
+      "points": 23.9,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-29T12:27:27.270118Z",
       "calories": 328,
@@ -156153,16 +156761,25 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/b1ae0446-000a-4bf3-b71b-807eea8826b3.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128809263,
+          "updated_at": "2026-07-26T16:17:16",
+          "created_at": "2026-07-26T16:17:16",
+          "account_id": 3025172,
+          "workout_id": 649270196,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
         {
           "id": 587112597,
           "steps": 543,
-          "start_time": "2026-05-28T16:53:50.097000Z",
-          "updated_at": "2026-05-29T12:27:27",
-          "points": 11.25779012345679,
+          "start_time": "2026-05-28T16:53:00.000000Z",
+          "updated_at": "2026-07-26T16:17:14",
+          "points": 23.9,
           "created_at": "2026-05-29T12:27:27",
           "calories": 328,
           "distance_miles": "0",
@@ -168522,8 +169139,8 @@
         "location_longitude": null
       },
       "duration": 45,
-      "updated_at": "2026-05-30T20:44:29.593324Z",
-      "points": 8.035714285714286,
+      "updated_at": "2026-07-26T16:23:51.359752Z",
+      "points": 28.74,
       "timezone": "Europe/Berlin",
       "created_at": "2026-05-30T20:44:29.593324Z",
       "calories": null,
@@ -168539,7 +169156,16 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/67c65c1e-33a8-4f7d-97ad-259f67d1199d.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128810118,
+          "updated_at": "2026-07-26T16:23:53",
+          "created_at": "2026-07-26T16:23:53",
+          "account_id": 3025172,
+          "workout_id": 650800742,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
@@ -168547,8 +169173,8 @@
           "id": 588119349,
           "steps": null,
           "start_time": "2026-05-30T20:44:00.000000Z",
-          "updated_at": "2026-05-30T20:44:29",
-          "points": 8.035714285714286,
+          "updated_at": "2026-07-26T16:23:51",
+          "points": 28.74,
           "created_at": "2026-05-30T20:44:29",
           "calories": null,
           "distance_miles": null,
@@ -177282,8 +177908,8 @@
         "location_longitude": null
       },
       "duration": 65,
-      "updated_at": "2026-05-31T21:37:15.174543Z",
-      "points": 10.141025641025642,
+      "updated_at": "2026-07-26T16:40:44.101119Z",
+      "points": 30,
       "timezone": "+02:00",
       "created_at": "2026-05-31T21:37:15.174543Z",
       "calories": 106,
@@ -177300,6 +177926,14 @@
       "photo_url": "https://cdn.gymrats.app/13cb6cfc-2365-4104-b556-83908cd59bb1.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128812014,
+          "updated_at": "2026-07-26T16:40:52",
+          "created_at": "2026-07-26T16:40:52",
+          "account_id": 3025172,
+          "workout_id": 651527896,
+          "reaction": "🎁"
+        },
         {
           "id": 121429412,
           "updated_at": "2026-06-03T11:25:51",
@@ -177331,9 +177965,9 @@
         {
           "id": 588652250,
           "steps": null,
-          "start_time": "2026-05-31T20:29:40.000000Z",
-          "updated_at": "2026-05-31T21:37:15",
-          "points": 10.141025641025642,
+          "start_time": "2026-05-31T20:29:00.000000Z",
+          "updated_at": "2026-07-26T16:40:44",
+          "points": 30,
           "created_at": "2026-05-31T21:37:15",
           "calories": 106,
           "distance_miles": null,
@@ -181194,8 +181828,8 @@
         "location_longitude": null
       },
       "duration": 39,
-      "updated_at": "2026-06-01T09:40:59.858382Z",
-      "points": 4.512,
+      "updated_at": "2026-07-26T16:30:52.528982Z",
+      "points": 24.11,
       "timezone": "Europe/Berlin",
       "created_at": "2026-06-01T09:40:59.858382Z",
       "calories": null,
@@ -181211,7 +181845,16 @@
       "google_place_id": null,
       "photo_url": "https://cdn.gymrats.app/11a2376b-af6e-4cbe-a854-6d8fb5fe7d4f.jpg",
       "activity_count": 1,
-      "reactions": [],
+      "reactions": [
+        {
+          "id": 128810889,
+          "updated_at": "2026-07-26T16:30:55",
+          "created_at": "2026-07-26T16:30:55",
+          "account_id": 3025172,
+          "workout_id": 651765074,
+          "reaction": "🎁"
+        }
+      ],
       "activity_metric_amount": null,
       "activity_type_id": null,
       "check_in_activities": [
@@ -181219,8 +181862,8 @@
           "id": 588835533,
           "steps": null,
           "start_time": "2026-05-30T09:39:00.000000Z",
-          "updated_at": "2026-06-01T09:40:59",
-          "points": 4.512,
+          "updated_at": "2026-07-26T16:30:52",
+          "points": 24.11,
           "created_at": "2026-06-01T09:40:59",
           "calories": null,
           "distance_miles": "11.28",
@@ -288436,8 +289079,8 @@
         "location_longitude": null
       },
       "duration": 45,
-      "updated_at": "2026-06-13T08:26:29.464286Z",
-      "points": 4.6875,
+      "updated_at": "2026-07-26T16:36:39.869139Z",
+      "points": 16.92,
       "timezone": "Europe/Berlin",
       "created_at": "2026-06-13T08:26:29.464286Z",
       "calories": null,
@@ -288455,6 +289098,14 @@
       "activity_count": 1,
       "reactions": [
         {
+          "id": 128811513,
+          "updated_at": "2026-07-26T16:36:48",
+          "created_at": "2026-07-26T16:36:48",
+          "account_id": 3025172,
+          "workout_id": 665655225,
+          "reaction": "🎁"
+        },
+        {
           "id": 127815506,
           "updated_at": "2026-07-20T11:58:33",
           "created_at": "2026-07-20T11:58:33",
@@ -288470,8 +289121,8 @@
           "id": 598075301,
           "steps": null,
           "start_time": "2026-06-12T15:25:00.000000Z",
-          "updated_at": "2026-06-13T08:26:29",
-          "points": 4.6875,
+          "updated_at": "2026-07-26T16:36:39",
+          "points": 16.92,
           "created_at": "2026-06-13T08:26:29",
           "calories": null,
           "distance_miles": null,
@@ -298773,8 +299424,8 @@
         "location_longitude": null
       },
       "duration": null,
-      "updated_at": "2026-06-14T11:10:02.350898Z",
-      "points": 1,
+      "updated_at": "2026-07-26T16:57:10.912912Z",
+      "points": 21.16,
       "timezone": "Europe/Berlin",
       "created_at": "2026-06-14T11:08:44.447530Z",
       "calories": null,
@@ -298791,6 +299442,14 @@
       "photo_url": "https://cdn.gymrats.app/0e0338ce-acf7-4747-bc3c-0aac9eac1435.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128813726,
+          "updated_at": "2026-07-26T16:57:12",
+          "created_at": "2026-07-26T16:57:12",
+          "account_id": 3025172,
+          "workout_id": 666372133,
+          "reaction": "🎁"
+        },
         {
           "id": 123073428,
           "updated_at": "2026-06-14T13:21:45",
@@ -298815,8 +299474,8 @@
           "id": 598578312,
           "steps": null,
           "start_time": "2026-06-12T20:03:00.000000Z",
-          "updated_at": "2026-06-14T11:10:02",
-          "points": 1,
+          "updated_at": "2026-07-26T16:57:10",
+          "points": 21.16,
           "created_at": "2026-06-14T11:10:02",
           "calories": null,
           "distance_miles": null,
@@ -301067,8 +301726,8 @@
         "location_longitude": null
       },
       "duration": null,
-      "updated_at": "2026-06-14T17:55:39.326909Z",
-      "points": 1,
+      "updated_at": "2026-07-26T16:35:53.790392Z",
+      "points": 21.16,
       "timezone": "Europe/Berlin",
       "created_at": "2026-06-14T17:55:39.326909Z",
       "calories": null,
@@ -301094,6 +301753,14 @@
           "reaction": "❤️"
         },
         {
+          "id": 128811419,
+          "updated_at": "2026-07-26T16:35:56",
+          "created_at": "2026-07-26T16:35:56",
+          "account_id": 3025172,
+          "workout_id": 666651925,
+          "reaction": "🎁"
+        },
+        {
           "id": 127485832,
           "updated_at": "2026-07-17T09:45:37",
           "created_at": "2026-07-17T09:45:37",
@@ -301109,8 +301776,8 @@
           "id": 598778839,
           "steps": null,
           "start_time": "2026-06-14T17:55:00.000000Z",
-          "updated_at": "2026-06-14T17:55:39",
-          "points": 1,
+          "updated_at": "2026-07-26T16:35:53",
+          "points": 21.16,
           "created_at": "2026-06-14T17:55:39",
           "calories": null,
           "distance_miles": null,
@@ -352841,8 +353508,8 @@
         "location_longitude": null
       },
       "duration": 30,
-      "updated_at": "2026-06-20T18:23:28.591023Z",
-      "points": 0.8483656896,
+      "updated_at": "2026-07-26T17:32:27.107564Z",
+      "points": 20.67,
       "timezone": "Europe/Berlin",
       "created_at": "2026-06-20T18:23:28.591023Z",
       "calories": 102,
@@ -352859,6 +353526,14 @@
       "photo_url": "https://cdn.gymrats.app/4d641090-58e1-4b9f-aad6-983bd27730a0.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128816993,
+          "updated_at": "2026-07-26T17:32:30",
+          "created_at": "2026-07-26T17:32:30",
+          "account_id": 3025172,
+          "workout_id": 673248815,
+          "reaction": "🎁"
+        },
         {
           "id": 124013666,
           "updated_at": "2026-06-21T05:59:19",
@@ -352898,9 +353573,9 @@
         {
           "id": 603156021,
           "steps": null,
-          "start_time": "2026-06-20T17:24:28.000000Z",
-          "updated_at": "2026-06-20T18:23:28",
-          "points": 0.8483656896,
+          "start_time": "2026-06-20T17:24:00.000000Z",
+          "updated_at": "2026-07-26T17:32:27",
+          "points": 20.67,
           "created_at": "2026-06-20T18:23:28",
           "calories": 102,
           "distance_miles": "1.7",
@@ -360060,8 +360735,8 @@
         "location_longitude": null
       },
       "duration": null,
-      "updated_at": "2026-06-21T16:09:25.734976Z",
-      "points": 5,
+      "updated_at": "2026-07-26T17:31:39.392238Z",
+      "points": 25,
       "timezone": "Europe/Berlin",
       "created_at": "2026-06-21T16:09:25.734976Z",
       "calories": null,
@@ -360078,6 +360753,14 @@
       "photo_url": "https://cdn.gymrats.app/af86a3f1-bc82-48f9-8a6b-e42d3c39912a.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128816943,
+          "updated_at": "2026-07-26T17:31:41",
+          "created_at": "2026-07-26T17:31:41",
+          "account_id": 3025172,
+          "workout_id": 673790041,
+          "reaction": "🎁"
+        },
         {
           "id": 124053761,
           "updated_at": "2026-06-21T19:01:31",
@@ -360102,8 +360785,8 @@
           "id": 603550005,
           "steps": null,
           "start_time": "2026-06-21T16:09:00.000000Z",
-          "updated_at": "2026-06-21T16:09:25",
-          "points": 5,
+          "updated_at": "2026-07-26T17:31:39",
+          "points": 25,
           "created_at": "2026-06-21T16:09:25",
           "calories": null,
           "distance_miles": "3",
@@ -393481,8 +394164,8 @@
         "location_longitude": null
       },
       "duration": 20,
-      "updated_at": "2026-06-25T12:53:30.934119Z",
-      "points": 2.6666666666666665,
+      "updated_at": "2026-07-26T17:21:26.733691Z",
+      "points": 22.44,
       "timezone": "Europe/Berlin",
       "created_at": "2026-06-25T12:53:30.934119Z",
       "calories": null,
@@ -393499,6 +394182,14 @@
       "photo_url": "https://cdn.gymrats.app/bdce4553-60ad-4d0b-a244-ce7897e6e492.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128816082,
+          "updated_at": "2026-07-26T17:21:28",
+          "created_at": "2026-07-26T17:21:28",
+          "account_id": 3025172,
+          "workout_id": 677554965,
+          "reaction": "🎁"
+        },
         {
           "id": 124550540,
           "updated_at": "2026-06-25T15:00:13",
@@ -393531,8 +394222,8 @@
           "id": 606089492,
           "steps": null,
           "start_time": "2026-06-25T10:45:00.000000Z",
-          "updated_at": "2026-06-25T12:53:30",
-          "points": 2.6666666666666665,
+          "updated_at": "2026-07-26T17:21:26",
+          "points": 22.44,
           "created_at": "2026-06-25T12:53:30",
           "calories": null,
           "distance_miles": null,
@@ -421019,8 +421710,8 @@
         "location_longitude": null
       },
       "duration": 32,
-      "updated_at": "2026-07-22T17:11:59.621857Z",
-      "points": 9.67,
+      "updated_at": "2026-07-26T17:29:48.082935Z",
+      "points": 30,
       "timezone": "Europe/Berlin",
       "created_at": "2026-06-29T10:55:20.633362Z",
       "calories": null,
@@ -421197,8 +421888,8 @@
           "id": 608232097,
           "steps": null,
           "start_time": "2026-06-29T10:54:00.000000Z",
-          "updated_at": "2026-07-22T17:11:59",
-          "points": 9.67,
+          "updated_at": "2026-07-26T17:29:48",
+          "points": 30,
           "created_at": "2026-06-29T10:55:20",
           "calories": null,
           "distance_miles": null,
@@ -423496,8 +424187,8 @@
         "location_longitude": null
       },
       "duration": 30,
-      "updated_at": "2026-06-29T17:26:32.625747Z",
-      "points": 4.634776923076923,
+      "updated_at": "2026-07-26T16:50:47.325544Z",
+      "points": 24.11,
       "timezone": "Europe/Berlin",
       "created_at": "2026-06-29T17:26:32.625747Z",
       "calories": 79,
@@ -423514,6 +424205,14 @@
       "photo_url": "https://cdn.gymrats.app/269f8791-2c5a-4383-a0ad-a5a413eb88e7.jpg",
       "activity_count": 1,
       "reactions": [
+        {
+          "id": 128813046,
+          "updated_at": "2026-07-26T16:50:49",
+          "created_at": "2026-07-26T16:50:49",
+          "account_id": 3025172,
+          "workout_id": 681020198,
+          "reaction": "🎁"
+        },
         {
           "id": 124955367,
           "updated_at": "2026-06-29T18:30:27",
@@ -423649,9 +424348,9 @@
         {
           "id": 608450196,
           "steps": null,
-          "start_time": "2026-06-29T16:53:53.000000Z",
-          "updated_at": "2026-06-29T17:26:32",
-          "points": 4.634776923076923,
+          "start_time": "2026-06-29T16:53:00.000000Z",
+          "updated_at": "2026-07-26T16:50:47",
+          "points": 24.11,
           "created_at": "2026-06-29T17:26:32",
           "calories": 79,
           "distance_miles": null,
